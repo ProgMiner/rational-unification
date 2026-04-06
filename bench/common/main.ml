@@ -63,8 +63,9 @@ module Make(T : Term) = struct
 
     module Trace = Trace(T)
 
-    let single_run trace =
-        List.fold_left (fun st (t1, t2) -> T.unify st t1 t2) (T.initial_state ()) trace
+    let single_run =
+        let hlp st (t1, t2) = T.unify st t1 t2 in
+        fun trace -> (List.fold_left[@specialised]) hlp (T.initial_state ()) trace
 
     let pp_state_dump ppf xs =
         xs |> Hashtbl.iter begin fun x t ->
@@ -101,7 +102,7 @@ module Make(T : Term) = struct
 
         for _ = 1 to cfg.Config.warmup do
             let trace = Trace.unmarshal_from_file cfg.Config.trace_file in
-            Sys.opaque_identity (ignore @@ single_run trace)
+            ignore @@ Sys.opaque_identity (single_run trace)
         done ;
 
         if not cfg.Config.quiet then begin
@@ -118,7 +119,7 @@ module Make(T : Term) = struct
                 let trace = Trace.unmarshal_from_file cfg.Config.trace_file in
 
                 let counter = Mtime_clock.counter () in
-                Sys.opaque_identity (ignore @@ single_run trace) ;
+                ignore @@ Sys.opaque_identity (single_run trace) ;
                 span := Mtime.Span.add !span @@ Mtime_clock.count counter
             done ;
 
