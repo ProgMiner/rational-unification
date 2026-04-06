@@ -1,0 +1,5 @@
+(include_subdirs qualified)
+
+(library
+ (name rational_unification)
+ (public_name rational-unification))

@@ -1,0 +1,4 @@
+(test
+ (name test_common_part)
+ (modules test_common_part term)
+ (libraries rational_unification qcheck))
