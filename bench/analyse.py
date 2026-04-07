@@ -239,26 +239,28 @@ def aggregate_results(results_list):
     pair_summaries = []
     for (a,b), records in pair_data.items():
         df = pd.DataFrame(records)
-        n_total = len(df)
+
         n_sig = df['significant'].sum()
         n_a_faster = ((df['faster'] == a) & df['significant']).sum()
         n_b_faster = ((df['faster'] == b) & df['significant']).sum()
         n_not_sig = n_sig - n_a_faster - n_b_faster
 
-        # For all tests (including non-significant) compute median ratio
         median_ratio = df['ratio'].median()
-
-        # Also geometric mean (more robust for ratios)
         geom_mean = np.exp(np.mean(np.log(df['ratio'])))
+
+        median_cliff = df['cliff'].median()
+        mean_cliff = df['cliff'].mean()
 
         pair_summaries.append({
             'pair': f'{a} vs {b}',
             'A_faster_sig': n_a_faster,
             'B_faster_sig': n_b_faster,
             'non_sig': n_not_sig,
-            'total_tests': n_total,
+            'total_tests': len(df),
             'median_ratio': median_ratio,
-            'geom_mean_ratio': geom_mean
+            'geom_mean_ratio': geom_mean,
+            'median_cliff': median_cliff,
+            'mean_cliff': mean_cliff,
         })
 
     df_pairs = pd.DataFrame(pair_summaries)

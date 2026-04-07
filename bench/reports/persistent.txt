@@ -32872,11 +32872,11 @@ JGS/TESTV/12     2.145182e-46  rational > huet; huet > robinson; rational > robi
 JGS/TESTV/8      5.302913e-40  rational > huet; huet > robinson; rational > robinson         17975.40         16231.15     17658.15
 
 === By pair (aggregated) ===
-                      A_faster_sig  B_faster_sig  non_sig  total_tests  median_ratio  geom_mean_ratio
-pair                                                                                                 
-robinson vs rational           597           481        0         1448      0.995446         0.992371
-robinson vs huet              1390            29        0         1448      0.846543         0.842245
-rational vs huet              1407            19        0         1448      0.851313         0.848720
+                      A_faster_sig  B_faster_sig  non_sig  total_tests  median_ratio  geom_mean_ratio  median_cliff  mean_cliff
+pair                                                                                                                           
+robinson vs rational           597           481        0         1448      0.995446         0.992371       -0.0906   -0.066108
+robinson vs huet              1390            29        0         1448      0.846543         0.842245       -0.9952   -0.793716
+rational vs huet              1407            19        0         1448      0.851313         0.848720       -0.9975   -0.837196
 
 === Total number of significant wins ===
            significant_wins
