@@ -17,11 +17,11 @@ SAMPLES_DIR = './samples'
 ALGOS = ['robinson', 'rational', 'huet']
 
 
-def compare_test(var, test_name, alpha=0.05):
+def compare_trace(var, trace_set, trace_name, alpha=0.05):
     data = {}
 
     for alg in ALGOS:
-        file_path = Path(SAMPLES_DIR) / var / alg / f'{test_name}.tsv'
+        file_path = Path(SAMPLES_DIR) / var / alg / trace_set / f'{trace_name}.tsv'
 
         if not file_path.exists():
             print(f'Warning: file not found {file_path}')
@@ -51,7 +51,7 @@ def compare_test(var, test_name, alpha=0.05):
     medians = {alg: np.median(times) for alg, times in data.items()}
 
     print('='*60)
-    print('Results for test:', test_name)
+    print('Results for trace:', trace_name)
 
     print('='*60)
     print('Median time (sec):')
@@ -123,7 +123,7 @@ def compare_test(var, test_name, alpha=0.05):
         }
 
     return {
-        'test_name': test_name,
+        'trace_name': trace_name,
         'medians': medians,
         'p_kruskal': p_kw,
         'significant_pairs': sig_pairs if p_kw < alpha and len(data)>=3 else None,
@@ -132,10 +132,10 @@ def compare_test(var, test_name, alpha=0.05):
     }
 
 
-def run_all_tests(var, alpha=0.05):
-    traces_path = Path(TRACES_DIR)
+def run_all_traces(var, trace_set, alpha=0.05):
+    traces_path = Path(TRACES_DIR) / trace_set
     if not traces_path.exists():
-        print(f'Error: directory {TRACES_DIR} not found')
+        print(f'Error: directory {traces_path} not found')
         return
 
     trace_files = list(traces_path.rglob('*.trace'))
@@ -148,16 +148,16 @@ def run_all_tests(var, alpha=0.05):
     results = []
     for trace_file in trace_files:
         rel_path = trace_file.relative_to(traces_path)
-        test_name = str(rel_path.with_suffix(''))
+        trace_name = str(rel_path.with_suffix(''))
 
         try:
-            res = compare_test(var, test_name, alpha)
+            res = compare_trace(var, trace_set, trace_name, alpha)
 
             if res is not None:
                 results.append(res)
 
         except Exception as e:
-            print(f'Error processing {test_name}:', e)
+            print(f'Error processing {trace_name}:', e)
 
         print()
 
@@ -176,17 +176,17 @@ def run_all_tests(var, alpha=0.05):
 def aggregate_results(results_list):
     """
     Parameters:
-        results_list: list of dictionaries returned by compare_test
+        results_list: list of dictionaries returned by compare_trace
     Returns:
-        summary_tests: DataFrame (test, medians, significant pairs)
+        summary_traces: DataFrame (trace, medians, significant pairs)
         summary_pairs: DataFrame (algorithm pair, number of wins, average speedup)
-        win_counts: DataFrame (total number of tests where algorithm is significantly faster)
+        win_counts: DataFrame (total number of traces where algorithm is significantly faster)
     """
 
     pair_data = {}
-    rows_tests = []
+    rows_traces = []
     for res in results_list:
-        test = res['test_name']
+        trace = res['trace_name']
         med = res['medians']
 
         # Use corrected flag if present, otherwise raw p_kruskal < alpha
@@ -211,7 +211,7 @@ def aggregate_results(results_list):
 
         win_str = "; ".join(wins)
         row = {
-            'test': test,
+            'trace': trace,
             'p_kruskal': p_kw,
             'significant_wins': win_str if win_str else 'none'
         }
@@ -219,22 +219,22 @@ def aggregate_results(results_list):
         for alg, m in med.items():
             row[f'median_{alg}'] = m
 
-        rows_tests.append(row)
+        rows_traces.append(row)
 
         for (pair_key, metrics) in res['pairwise_metrics'].items():
             a, b = pair_key.split('_vs_')
 
             is_sig = any((a==x and b==y) or (a==y and b==x) for (x,y,_) in sig_pairs)
             pair_data.setdefault((a,b), []).append({
-                'test': test,
+                'trace': trace,
                 'ratio': metrics['ratio_median'],
                 'cliff': metrics['cliff_delta'],
                 'faster': metrics['faster'],
                 'significant': is_sig
             })
 
-    df_tests = pd.DataFrame(rows_tests)
-    df_tests.set_index('test', inplace=True)
+    df_traces = pd.DataFrame(rows_traces)
+    df_traces.set_index('trace', inplace=True)
 
     pair_summaries = []
     for (a,b), records in pair_data.items():
@@ -256,7 +256,7 @@ def aggregate_results(results_list):
             'A_faster_sig': n_a_faster,
             'B_faster_sig': n_b_faster,
             'non_sig': n_not_sig,
-            'total_tests': len(df),
+            'total_traces': len(df),
             'median_ratio': median_ratio,
             'geom_mean_ratio': geom_mean,
             'median_cliff': median_cliff,
@@ -280,33 +280,46 @@ def aggregate_results(results_list):
     df_wins.set_index('algorithm', inplace=True)
 
     return {
-        'test_summary': df_tests,
+        'trace_summary': df_traces,
         'pair_summary': df_pairs,
         'win_counts': df_wins,
         'detailed_pair_data': pair_data,
     }
 
 
-def print_usage():
-    print(f'Usage: {sys.argv[0]} <variant>')
+def list_subdirs(path):
+    if not isinstance(path, Path):
+        path = Path(path)
 
     try:
-        available = ', '.join([item.name for item in Path(SAMPLES_DIR).iterdir() if item.is_dir()])
-        print('  <variant> can be one of:', available)
+        available = [item.name for item in path.iterdir() if item.is_dir()]
+
     except OSError:
-        print('  <variant>: no available values')
+        available = None
+
+    if not available:
+        return '(no available values)'
+
+    return ', '.join(available)
+
+
+def print_usage():
+    print(f'Usage: {sys.argv[0]} <variant> <trace set>')
+
+    print('  - <variant> can be one of:', list_subdirs(SAMPLES_DIR))
+    print('  - <trace set> can be one of:', list_subdirs(TRACES_DIR))
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print_usage()
         exit(1)
 
-    all_results = run_all_tests(sys.argv[1], alpha=0.05)
+    all_results = run_all_traces(sys.argv[1], sys.argv[2], alpha=0.05)
     agg = aggregate_results(all_results)
 
-    print('=== By test ===')
-    print(agg['test_summary'].to_string())
+    print('=== By trace ===')
+    print(agg['trace_summary'].to_string())
 
     print('\n=== By pair (aggregated) ===')
     print(agg['pair_summary'].to_string())
