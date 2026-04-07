@@ -3,7 +3,10 @@
 
 TRACES_DIR='./traces'
 SAMPLES_DIR='./samples'
-ALGOS='ephemeral/robinson ephemeral/rational ephemeral/huet'
+ALGOS='
+    ephemeral/robinson  ephemeral/rational  ephemeral/huet
+    persistent/robinson persistent/rational persistent/huet
+'
 
 if [ $# -ne 0 ] ; then
     file=$1

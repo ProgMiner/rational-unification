@@ -76,7 +76,7 @@ and unify t1 t2 =
             let x : Var.t = Obj.obj t1 in
             let y : Var.t = Obj.obj t2 in
 
-            if x.Var.index == y.Var.index then ()
+            if x == y then ()
             else if x.Var.index < y.Var.index then y.Var.subst <- Some t1
             else x.Var.subst <- Some t2
         end else if Var.check t1 then begin
@@ -158,8 +158,6 @@ module Term = struct
             let tx = Obj.tag t in
 
             if is_cons t then begin
-                let t = deref_cons t in
-
                 Format.fprintf ppf "boxed %d <" tx ;
                 for i = 1 to Obj.size t - 1 do
                     if i > 1 then Format.fprintf ppf ", " ;

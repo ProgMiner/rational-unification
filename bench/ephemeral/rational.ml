@@ -147,7 +147,9 @@ and unify t1 t2 =
     end else begin
         let tx = Obj.tag t1 in
 
-        if tx == Obj.tag t2 then begin
+        if tx != Obj.tag t2 then begin
+            raise Common.Unification_failure
+        end else begin
             if is_cons t1 then begin
                 let sx = Obj.size t1 in
 
@@ -163,8 +165,6 @@ and unify t1 t2 =
                     raise Common.Unification_failure
                 end
             end
-        end else begin
-            raise Common.Unification_failure
         end
     end
 
