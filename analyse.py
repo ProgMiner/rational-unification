@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,14 +14,14 @@ from statsmodels.stats.multitest import multipletests
 
 TRACES_DIR = './traces'
 SAMPLES_DIR = './samples'
-ALGOS = ['ephemeral/robinson', 'ephemeral/rational', 'ephemeral/huet']
+ALGOS = ['robinson', 'rational', 'huet']
 
 
-def compare_test(test_name, alpha=0.05):
+def compare_test(var, test_name, alpha=0.05):
     data = {}
 
     for alg in ALGOS:
-        file_path = Path(SAMPLES_DIR) / alg / f'{test_name}.tsv'
+        file_path = Path(SAMPLES_DIR) / var / alg / f'{test_name}.tsv'
 
         if not file_path.exists():
             print(f'Предупреждение: файл не найден {file_path}')
@@ -133,7 +134,7 @@ def compare_test(test_name, alpha=0.05):
     }
 
 
-def run_all_tests(alpha=0.05):
+def run_all_tests(var, alpha=0.05):
     traces_path = Path(TRACES_DIR)
     if not traces_path.exists():
         print(f'Ошибка: директория {TRACES_DIR} не найдена')
@@ -152,7 +153,7 @@ def run_all_tests(alpha=0.05):
         test_name = str(rel_path.with_suffix(''))
 
         try:
-            res = compare_test(test_name, alpha)
+            res = compare_test(var, test_name, alpha)
 
             if res is not None:
                 results.append(res)
@@ -195,7 +196,7 @@ def aggregate_results(results_list):
             has_significant = res['reject_h0_corrected']
         else:
             has_significant = res['p_kruskal'] < alpha
-        
+
         if has_significant:
             sig_pairs = res.get('significant_pairs', [])
         else:
@@ -290,7 +291,11 @@ def aggregate_results(results_list):
 
 
 if __name__ == '__main__':
-    all_results = run_all_tests(alpha=0.05)
+    if len(sys.argv) != 2:
+        print(f'Usage: {sys.argv[0]} <variant>')
+        exit(1)
+
+    all_results = run_all_tests(sys.argv[1], alpha=0.05)
 
     agg = aggregate_results(all_results)
     print('=== По тестам ===')

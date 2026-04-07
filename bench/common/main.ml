@@ -20,7 +20,7 @@ module Config = struct
         cpu = 0 ;
         warmup = 100 ;
         samples = 100 ;
-        iters = 100 ;
+        iters = 20 ;
         quiet = false ;
     }
 
