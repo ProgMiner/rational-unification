@@ -92,7 +92,11 @@ let common_part x y = snd @@ CommonPart.common_part x y
 
 let rec walk x = match x.Var.subst with
 | None -> x, Obj.repr x
-| Some t when Var.check t -> walk (Obj.obj t : Var.t)
+| Some t when Var.check t ->
+    let y : Var.t = Obj.obj t in
+    let y', _ as res = walk y in
+    if y' != y then x.Var.subst <- Some (Obj.repr y') ;
+    res
 | Some t -> x, t
 
 let union x y =

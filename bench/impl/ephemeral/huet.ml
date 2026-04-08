@@ -32,18 +32,14 @@ end = struct
         Obj.tag x == my_tag && Obj.size x == my_size && (Obj.obj x).anchor == anchor
 end
 
-let walk =
-    let rec walkv x = match x.Var.subst with
-    | None -> Obj.repr x
-    | Some t -> walkt t
-
-    and walkt t =
-        if Var.check t
-        then walkv (Obj.obj t : Var.t)
-        else t
-    in
-
-    walkv
+let rec walk x = match x.Var.subst with
+| None -> Obj.repr x
+| Some t ->
+    if Var.check t then begin
+        let t' = walk (Obj.obj t : Var.t) in
+        if t' != t then x.Var.subst <- Some t' ;
+        t'
+    end else t
 
 let[@inline] is_cons x =
     let tx = Obj.tag x in
@@ -52,9 +48,13 @@ let[@inline] is_cons x =
 let link_cons x y = Obj.set_field x 0 y
 
 let rec deref_cons x =
-    let x' = Obj.field x 0 in
-    if Obj.tag x' == Obj.int_tag then x
-    else deref_cons x'
+    let y = Obj.field x 0 in
+    if Obj.tag y == Obj.int_tag then x
+    else begin
+        let y' = deref_cons y in
+        if y' != y then Obj.set_field x 0 y' ;
+        y'
+    end
 
 let[@inline] rec unify_vt x t2 =
     let t1 = walk x in
