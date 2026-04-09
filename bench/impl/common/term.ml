@@ -10,6 +10,7 @@ module type S = sig
     val string : string -> t
     val cons : int -> t array -> t
 
+    val size : t -> int
     val pp : Format.formatter -> t -> unit
 
     val initial_state : unit -> state

@@ -192,6 +192,19 @@ module Term = struct
     let string x = Obj.repr (x : string)
     let cons tag xs = Obj.with_tag tag @@ Obj.repr (xs : t array)
 
+    let rec size t =
+        if Var.check t then 1
+        else if is_cons t then begin
+            let sx = Obj.size t in
+
+            let rec hlp i acc =
+                if i = sx then acc
+                else hlp (i + 1) @@ acc + size (Obj.field t i)
+            in
+
+            hlp 0 1
+        end else 1
+
     let rec pp ppf t =
         if Var.check t then begin
             let x : Var.t = Obj.obj t in

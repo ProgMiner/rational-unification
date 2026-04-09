@@ -150,6 +150,19 @@ module Term = struct
         done ;
         res
 
+    let rec size t =
+        if Var.check t then 1
+        else if is_cons t then begin
+            let sx = Obj.size t in
+
+            let rec hlp i acc =
+                if i = sx then acc
+                else hlp (i + 1) @@ acc + size (Obj.field t i)
+            in
+
+            hlp 1 1
+        end else 1
+
     let rec pp ppf t =
         if Var.check t then begin
             let x : Var.t = Obj.obj t in

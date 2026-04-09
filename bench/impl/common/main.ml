@@ -92,6 +92,12 @@ module Make(T : Term) = struct
                 else Format.printf "State dump:\n%a" pp_state_dump dump
             end ;
 
+            if not cfg.Config.quiet then Printf.printf "Variables\tSize\n" ;
+
+            let dump_len = Hashtbl.length dump in
+            let dump_size = Hashtbl.fold (fun _ t acc -> acc + T.size t) dump 0 in
+            Format.printf "%d\t%d\n" dump_len dump_size ;
+
             exit 0
         end ;
 
