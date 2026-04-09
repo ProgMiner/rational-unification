@@ -71,38 +71,40 @@ def compare_trace(var, trace_set, trace_name, alpha=0.05):
         print('  -> Fail to reject H0: no differences detected between algorithms.')
 
     # 3. Post-hoc Dunn test (pairwise) with Bonferroni correction
-    if p_kw < alpha and len(data) >= 3:
-        dunn_result = sp.posthoc_dunn(df_long, val_col='time', group_col='algorithm', p_adjust='bonferroni')
-        print('\nPost-hoc Dunn test (p-values, Bonferroni corrected):')
-        print(dunn_result.round(6))
+    if p_kw < alpha:
+        if len(data) >= 3:
+            dunn_result = sp.posthoc_dunn(df_long, val_col='time', group_col='algorithm', p_adjust='bonferroni')
+            print('\nPost-hoc Dunn test (p-values, Bonferroni corrected):')
+            print(dunn_result.round(6))
 
-        sig_pairs = []
-        for i, alg1 in enumerate(dunn_result.columns):
-            for alg2 in dunn_result.columns[i+1:]:
-                p_val = dunn_result.loc[alg1, alg2]
-                if p_val < alpha:
-                    sig_pairs.append((alg1, alg2, p_val))
+            sig_pairs = []
+            for i, alg1 in enumerate(dunn_result.columns):
+                for alg2 in dunn_result.columns[i+1:]:
+                    p_val = dunn_result.loc[alg1, alg2]
+                    if p_val < alpha:
+                        sig_pairs.append((alg1, alg2, p_val))
 
-        if sig_pairs:
-            print(f'\nStatistically significant differences between pairs (p < {alpha}):')
+            if sig_pairs:
+                print(f'\nStatistically significant differences between pairs (p < {alpha}):')
 
-            for a1, a2, pv in sig_pairs:
-                print(f'  {a1} vs {a2} : p = {pv:.6f}')
+                for a1, a2, pv in sig_pairs:
+                    print(f'  {a1} vs {a2} : p = {pv:.6f}')
 
-        else:
-            print(f'\nNo significant pairwise differences detected at α={alpha}.')
+            else:
+                print(f'\nNo significant pairwise differences detected at α={alpha}.')
 
-    elif len(data) == 2 and p_kw < alpha:
-        # For two groups, Kruskal-Wallis is equivalent to Mann-Whitney U
-        # but post-hoc is not needed, just report
-        print('\nOnly two algorithms with data. Significant difference confirmed by Kruskal-Wallis.')
+        elif len(data) == 2:
+            # For two groups, Kruskal-Wallis is equivalent to Mann-Whitney U
+            # but post-hoc is not needed, just report
+            print('\nOnly two algorithms with data. Significant difference confirmed by Kruskal-Wallis.')
 
-        # optionally compute Cliff's delta or median ratio
-        alg1, alg2 = list(data.keys())
-        times1, times2 = data[alg1], data[alg2]
+            alg1, alg2 = list(data.keys())
+            sig_pairs = [(alg1, alg2, p_kw)]
 
-        ratio = medians[alg1] / medians[alg2] if medians[alg2] != 0 else np.inf
-        print(f'  Median ratio ({alg1} / {alg2}) = {ratio:.3f}')
+            # optionally compute Cliff's delta or median ratio
+            times1, times2 = data[alg1], data[alg2]
+            ratio = medians[alg1] / medians[alg2] if medians[alg2] != 0 else np.inf
+            print(f'  Median ratio ({alg1} / {alg2}) = {ratio:.3f}')
 
     pairwise_metrics = {}
     algs_list = list(data.keys())
@@ -126,7 +128,7 @@ def compare_trace(var, trace_set, trace_name, alpha=0.05):
         'trace_name': trace_name,
         'medians': medians,
         'p_kruskal': p_kw,
-        'significant_pairs': sig_pairs if p_kw < alpha and len(data)>=3 else None,
+        'significant_pairs': sig_pairs if p_kw < alpha else [],
         'pairwise_metrics': pairwise_metrics,
         'data': data,
     }
