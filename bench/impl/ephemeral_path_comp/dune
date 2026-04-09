@@ -1,0 +1,4 @@
+
+(executables
+  (names robinson rational huet)
+  (libraries common))
