@@ -1,0 +1,346 @@
+Found 22 files
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n80.tsv
+============================================================
+Results for trace: full/n80
+============================================================
+Median time (sec):
+  rational                       : 7265.800000
+  huet                           : 8019.450000
+
+Kruskal-Wallis H-test: H = 144.7511, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.906
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n50.tsv
+============================================================
+Results for trace: full/n50
+============================================================
+Median time (sec):
+  rational                       : 4635.900000
+  huet                           : 5147.850000
+
+Kruskal-Wallis H-test: H = 136.9800, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.901
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n70.tsv
+============================================================
+Results for trace: full/n70
+============================================================
+Median time (sec):
+  rational                       : 6537.950000
+  huet                           : 7132.300000
+
+Kruskal-Wallis H-test: H = 88.6536, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.917
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n60.tsv
+============================================================
+Results for trace: full/n60
+============================================================
+Median time (sec):
+  rational                       : 5360.750000
+  huet                           : 5972.000000
+
+Kruskal-Wallis H-test: H = 147.6467, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.898
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n20.tsv
+============================================================
+Results for trace: full/n20
+============================================================
+Median time (sec):
+  rational                       : 1958.900000
+  huet                           : 2202.750000
+
+Kruskal-Wallis H-test: H = 127.5681, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.889
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n10.tsv
+============================================================
+Results for trace: full/n10
+============================================================
+Median time (sec):
+  rational                       : 1079.550000
+  huet                           : 1194.850000
+
+Kruskal-Wallis H-test: H = 50.0536, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.904
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n30.tsv
+============================================================
+Results for trace: full/n30
+============================================================
+Median time (sec):
+  rational                       : 2912.700000
+  huet                           : 3260.000000
+
+Kruskal-Wallis H-test: H = 115.4512, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.893
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n90.tsv
+============================================================
+Results for trace: full/n90
+============================================================
+Median time (sec):
+  rational                       : 8156.350000
+  huet                           : 105813.400000
+
+Kruskal-Wallis H-test: H = 147.8840, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.077
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n40.tsv
+============================================================
+Results for trace: full/n40
+============================================================
+Median time (sec):
+  rational                       : 3685.250000
+  huet                           : 4206.600000
+
+Kruskal-Wallis H-test: H = 147.5872, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.876
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n100.tsv
+============================================================
+Results for trace: full/n100
+============================================================
+Median time (sec):
+  rational                       : 9122.450000
+  huet                           : 10139.000000
+
+Kruskal-Wallis H-test: H = 148.5382, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.900
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/full/n0.tsv
+============================================================
+Results for trace: full/n0
+============================================================
+Median time (sec):
+  rational                       : 111.200000
+  huet                           : 109.600000
+
+Kruskal-Wallis H-test: H = 25.9557, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.015
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n80.tsv
+============================================================
+Results for trace: left_right/n80
+============================================================
+Median time (sec):
+  rational                       : 10156.800000
+  huet                           : 11159.000000
+
+Kruskal-Wallis H-test: H = 122.5129, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.910
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n50.tsv
+============================================================
+Results for trace: left_right/n50
+============================================================
+Median time (sec):
+  rational                       : 6669.000000
+  huet                           : 7216.350000
+
+Kruskal-Wallis H-test: H = 108.3948, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.924
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n70.tsv
+============================================================
+Results for trace: left_right/n70
+============================================================
+Median time (sec):
+  rational                       : 9265.900000
+  huet                           : 118218.150000
+
+Kruskal-Wallis H-test: H = 149.2538, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.078
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n60.tsv
+============================================================
+Results for trace: left_right/n60
+============================================================
+Median time (sec):
+  rational                       : 7848.900000
+  huet                           : 8511.150000
+
+Kruskal-Wallis H-test: H = 132.1622, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.922
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n20.tsv
+============================================================
+Results for trace: left_right/n20
+============================================================
+Median time (sec):
+  rational                       : 2753.000000
+  huet                           : 2967.600000
+
+Kruskal-Wallis H-test: H = 81.3567, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.928
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n10.tsv
+============================================================
+Results for trace: left_right/n10
+============================================================
+Median time (sec):
+  rational                       : 1382.850000
+  huet                           : 1618.300000
+
+Kruskal-Wallis H-test: H = 80.9829, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.855
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n30.tsv
+============================================================
+Results for trace: left_right/n30
+============================================================
+Median time (sec):
+  rational                       : 3806.550000
+  huet                           : 4237.000000
+
+Kruskal-Wallis H-test: H = 146.9940, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.898
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n90.tsv
+============================================================
+Results for trace: left_right/n90
+============================================================
+Median time (sec):
+  rational                       : 11763.850000
+  huet                           : 12892.550000
+
+Kruskal-Wallis H-test: H = 142.9925, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.912
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n40.tsv
+============================================================
+Results for trace: left_right/n40
+============================================================
+Median time (sec):
+  rational                       : 5045.300000
+  huet                           : 5629.800000
+
+Kruskal-Wallis H-test: H = 124.6315, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.896
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n100.tsv
+============================================================
+Results for trace: left_right/n100
+============================================================
+Median time (sec):
+  rational                       : 13225.700000
+  huet                           : 14493.600000
+
+Kruskal-Wallis H-test: H = 142.9927, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 0.913
+
+Warning: file not found samples/ephemeral_path_comp/robinson/synth/left_right/n0.tsv
+============================================================
+Results for trace: left_right/n0
+============================================================
+Median time (sec):
+  rational                       : 181.550000
+  huet                           : 155.900000
+
+Kruskal-Wallis H-test: H = 135.4293, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.165
+
+Tests processed: 22
+=== By trace ===
+                    p_kruskal significant_wins  median_rational  median_huet
+trace                                                                       
+full/n80         2.434293e-33  rational > huet          7265.80      8019.45
+full/n50         1.218052e-31  rational > huet          4635.90      5147.85
+full/n70         4.703764e-21  rational > huet          6537.95      7132.30
+full/n60         5.667116e-34  rational > huet          5360.75      5972.00
+full/n20         1.395327e-29  rational > huet          1958.90      2202.75
+full/n10         1.496065e-12  rational > huet          1079.55      1194.85
+full/n30         6.268219e-27  rational > huet          2912.70      3260.00
+full/n90         5.029134e-34  rational > huet          8156.35    105813.40
+full/n40         5.839360e-34  rational > huet          3685.25      4206.60
+full/n100        3.618182e-34  rational > huet          9122.45     10139.00
+full/n0          3.493359e-07  huet > rational           111.20       109.60
+left_right/n80   1.782500e-28  rational > huet         10156.80     11159.00
+left_right/n50   2.202311e-25  rational > huet          6669.00      7216.35
+left_right/n70   2.523797e-34  rational > huet          9265.90    118218.15
+left_right/n60   1.378782e-30  rational > huet          7848.90      8511.15
+left_right/n20   1.884437e-19  rational > huet          2753.00      2967.60
+left_right/n10   2.276753e-19  rational > huet          1382.85      1618.30
+left_right/n30   7.871131e-34  rational > huet          3806.55      4237.00
+left_right/n90   5.900392e-33  rational > huet         11763.85     12892.55
+left_right/n40   6.128044e-29  rational > huet          5045.30      5629.80
+left_right/n100  5.899755e-33  rational > huet         13225.70     14493.60
+left_right/n0    2.659773e-31  huet > rational           181.55       155.90
+
+=== By pair (aggregated) ===
+                  A_faster_sig  B_faster_sig  non_sig  total_traces  median_ratio  geom_mean_ratio  median_cliff  mean_cliff
+pair                                                                                                                        
+rational vs huet            20             2        0            22      0.902027         0.734238      -0.93275   -0.761232
+
+=== Total number of significant wins ===
+           significant_wins
+algorithm                  
+rational                 20
+huet                      2
