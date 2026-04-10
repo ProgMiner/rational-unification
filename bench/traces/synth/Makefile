@@ -2,7 +2,7 @@
 N=100
 K=10
 
-SETS=full left_right
+SETS=full left_right loops1 loops2 loops3 loops4
 
 .PHONY: all clean
 .SUFFIXES:
