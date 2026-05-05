@@ -15,6 +15,17 @@ let rec pp ppf = function
 
 exception No_common_part
 
+(*
+(* straightforward implementation *)
+let rec common_part x y = match x, y with
+| Var x, _ -> Var x
+| _, Var y -> Var y
+| Con (f, ts1), Con (g, ts2)
+when f == g && Array.length ts1 == Array.length ts2 ->
+    Con (f, Array.map2 common_part ts1 ts2)
+| _ -> raise No_common_part
+*)
+
 module CommonPart = struct
 
     type side = Aside | Right | Left | Both
