@@ -22,6 +22,7 @@
  (depends
    (ocaml (>= 5))
    (qcheck (and :with-test (>= 0.90)))
+   (mtime (>= 2))
    processor
    benchmark)
  (tags
