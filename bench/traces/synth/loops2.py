@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''
 Generate a trace with n equations of the form xi = f(xi) (cyclic terms)
-and then unify each xi with x0 (i.e., x0 = xi).
+and then unify each xi with x0 (i.e., xi = x0).
 '''
 
 import os
@@ -18,7 +18,7 @@ def generate_trace(output_file: str, n: int) -> None:
     Generate a trace file containing:
         for i in 1..n:
             xi = f(xi)
-            x0 = xi
+            xi = x0
     where x0 has index 0, xi has index i.
     '''
 

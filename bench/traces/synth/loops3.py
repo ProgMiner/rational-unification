@@ -18,7 +18,7 @@ def generate_trace(output_file: str, n: int) -> None:
     Generate a trace file containing:
         for i in 1..n:
             xi = f(xi)
-            x0 = xi
+            x_{i-1} = xi
     where x0 has index 0, xi has index i.
     '''
 
