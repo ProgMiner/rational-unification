@@ -1,11 +1,26 @@
 #!/usr/bin/env sh
 
+# This script is intended to run by root
+
+# change this if you have no realtime scheduling support
+CHRT=true # false
+
+# CPU number to run on
+CPU=4
+
 
 TRACES_DIR='./traces'
 SAMPLES_DIR='./samples'
 ALGOS='robinson rational huet'
 VARIANTS='ephemeral ephemeral_path_comp persistent'
-CPU=3
+
+if ! "$CHRT"; then
+    chrt() {
+        shift
+        shift
+        exec "$@"
+    }
+fi
 
 if [ $# -ne 0 ] ; then
     file=$1
@@ -26,7 +41,7 @@ if [ $# -ne 0 ] ; then
             res="$SAMPLES_DIR/$var_algo/$trace.tsv"
             mkdir -p "$(dirname "$res")"
 
-            sudo ./fix_affinity.py "$2" "$CPU"
+            ./fix_affinity.py "$2" "$CPU"
 
             ulimit -r unlimited
 
@@ -40,6 +55,6 @@ if [ $# -ne 0 ] ; then
     exit 0
 fi
 
-sudo renice -20 -p $$
+renice -20 -p $$
 
 find "$TRACES_DIR" -name '*.trace' -type f -exec sh "$0" '{}' "$$" ';'
