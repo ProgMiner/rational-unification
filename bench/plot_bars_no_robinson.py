@@ -62,10 +62,10 @@ def has_run(variant: str, trace_set: str, trace_name: str, algo: str) -> bool:
     return file_path.exists()
 
 
-def compute_minimum(times: np.ndarray) -> float:
+def compute_median(times: np.ndarray) -> float:
     if len(times) == 0:
         return float('nan')
-    return float(np.min(times))
+    return float(np.median(times))
 
 
 def plot_bars(variant: str, trace_set: str, output_file: str = None, ymax: float = None):
@@ -94,8 +94,8 @@ def plot_bars(variant: str, trace_set: str, output_file: str = None, ymax: float
             if len(times) == 0:
                 continue
             has_any_data = True
-            minimum = compute_minimum(times)
-            data[trace][algo] = minimum
+            median = compute_median(times)
+            data[trace][algo] = median
 
     if not has_any_data:
         print("No data found for any algorithm. Exiting.")
@@ -108,21 +108,21 @@ def plot_bars(variant: str, trace_set: str, output_file: str = None, ymax: float
 
     algorithms_with_data = []
     for i, algo in enumerate(algorithms):
-        minimums = []
+        medians = []
         for trace in filtered_traces:
             if algo in data[trace]:
-                min_val = data[trace][algo]
-                if not np.isnan(min_val):
-                    minimums.append(min_val)
+                med_val = data[trace][algo]
+                if not np.isnan(med_val):
+                    medians.append(med_val)
                 else:
-                    minimums.append(np.nan)
+                    medians.append(np.nan)
             else:
-                minimums.append(np.nan)
+                medians.append(np.nan)
 
-        valid_minimums = [m for m in minimums if m is not None and not np.isnan(m)]
+        valid_minimums = [m for m in medians if m is not None and not np.isnan(m)]
         if len(valid_minimums) > 0:
             algorithms_with_data.append(algo)
-            ax.bar(x + i * width, minimums, width, label=algo, color=algo_to_color[algo], alpha=0.8)
+            ax.bar(x + i * width, medians, width, label=algo, color=algo_to_color[algo], alpha=0.8)
 
     if len(algorithms_with_data) == 0:
         print("No valid data for any algorithm. Exiting.")

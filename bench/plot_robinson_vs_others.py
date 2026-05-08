@@ -70,7 +70,7 @@ def load_medians_for_trace_set(variant, trace_set):
                 df = pd.read_csv(file_path, sep='\t', header=None, names=['n', 'time'], index_col='n')
                 times = df['time'].dropna().values
                 if len(times) > 0:
-                    trace_meds[alg] = np.min(times)
+                    trace_meds[alg] = np.median(times)
             except Exception as e:
                 print(f'Warning: could not read {file_path}: {e}')
         if 'robinson' in trace_meds:
