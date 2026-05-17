@@ -2,14 +2,14 @@
 """
 compare_ephemeral_variants.py
 
-Сравнение вариантов ephemeral и ephemeral_path_comp для заданного алгоритма.
-По каждому трейсу (тесту) вычисляются медианные времена, проводится тест Манна–Уитни,
-вычисляется отношение медиан и Cliff's delta. Результаты агрегируются и выводятся в виде таблиц.
+Compares ephemeral and ephemeral_path_comp variants for a given algorithm.
+For each trace (test), computes median times, performs Mann-Whitney test,
+calculates median ratio and Cliff's delta. Results are aggregated and displayed as tables.
 
-Аргументы командной строки:
-    algorithm  – один из: robinson, rational, huet
-    trace_set  – (опционально) набор трасс (поддиректория в ./traces)
-                 Если не указан, используются все имеющиеся trace_set.
+Command-line arguments:
+    algorithm  – one of: robinson, rational, huet
+    trace_set  – (optional) trace set (subdirectory in ./traces)
+                 If not specified, all available trace sets are used.
 """
 
 import sys
@@ -45,7 +45,7 @@ def print_usage():
     print('    If trace_set is omitted, all available trace sets are used.')
 
 def compare_trace(algorithm, trace_set, trace_name, alpha=0.05):
-    """Сравнивает ephemeral и ephemeral_path_comp на одном трейсе."""
+    """Compares ephemeral and ephemeral_path_comp on a single trace."""
     data = {}
     for var in VARIANTS:
         file_path = Path(SAMPLES_DIR) / var / algorithm / trace_set / f'{trace_name}.tsv'
@@ -67,10 +67,10 @@ def compare_trace(algorithm, trace_set, trace_name, alpha=0.05):
         print(f'Insufficient data for comparison (need both variants)')
         return None
 
-    # Медианы
+    # Medians
     medians = {var: np.median(times) for var, times in data.items()}
 
-    # Тест Манна–Уитни
+    # Mann-Whitney test
     u_stat, p_mw = stats.mannwhitneyu(data['ephemeral'], data['ephemeral_path_comp'],
                                       alternative='two-sided')
     print('='*60)
@@ -107,9 +107,9 @@ def compare_trace(algorithm, trace_set, trace_name, alpha=0.05):
     }
 
 def run_all_traces(algorithm, trace_set=None, alpha=0.05):
-    """Обходит все трейсы в указанном trace_set (или всех) и возвращает список результатов."""
+    """Iterates through all traces in the specified trace_set (or all) and returns a list of results."""
     if trace_set is None:
-        # Все доступные trace_set
+        # All available trace sets
         traces_dir = Path(TRACES_DIR)
         if not traces_dir.exists():
             print(f'Error: {TRACES_DIR} does not exist.')
@@ -138,13 +138,13 @@ def run_all_traces(algorithm, trace_set=None, alpha=0.05):
             trace_name = str(rel_path.with_suffix(''))
             res = compare_trace(algorithm, ts, trace_name, alpha)
             if res is not None:
-                # Добавляем идентификатор trace_set для уникальности
+                # Add trace_set identifier for uniqueness
                 res['trace_set'] = ts
                 res['full_name'] = f"{ts}::{trace_name}"
                 all_results.append(res)
             print()
 
-    # Поправка на множественное тестирование (FDR)
+    # Correction for multiple testing (FDR)
     if all_results:
         p_vals = [r['p_value'] for r in all_results]
         reject, p_corrected, _, _ = multipletests(p_vals, alpha=alpha, method='fdr_bh')
@@ -156,16 +156,16 @@ def run_all_traces(algorithm, trace_set=None, alpha=0.05):
 
 def aggregate_results(results, algorithm):
     """
-    Строит сводные таблицы:
-    - trace_summary: по каждому трейсу медианы, p-value, значимость
-    - pair_summary: агрегированные метрики для пары ephemeral vs ephemeral_path_comp
-    - win_counts: число значимых побед каждого варианта
+    Constructs summary tables:
+    - trace_summary: median, p-value, significance for each trace
+    - pair_summary: aggregated metrics for pair ephemeral vs ephemeral_path_comp
+    - win_counts: count of significant wins for each variant
     """
     if not results:
         print("No results to aggregate.")
         return None
 
-    # Таблица по трейсам
+    # Table by trace
     rows = []
     for r in results:
         row = {
@@ -181,7 +181,7 @@ def aggregate_results(results, algorithm):
         rows.append(row)
     df_traces = pd.DataFrame(rows).set_index('trace')
 
-    # Агрегированные метрики для пары
+    # Aggregated metrics for pair
     n_total = len(results)
     n_sig = sum(r['significant_corrected'] for r in results if 'significant_corrected' in r)
     n_ephemeral_faster = sum((r['significant_corrected'] and r['ratio_median'] < 1.0)
@@ -189,7 +189,7 @@ def aggregate_results(results, algorithm):
     n_path_comp_faster = sum((r['significant_corrected'] and r['ratio_median'] > 1.0)
                              for r in results if 'significant_corrected' in r)
 
-    # Медианное отношение, среднее геометрическое
+    # Median ratio, geometric mean
     ratios = [r['ratio_median'] for r in results]
     median_ratio = np.median(ratios)
     geom_mean_ratio = np.exp(np.mean(np.log(ratios)))
@@ -210,7 +210,7 @@ def aggregate_results(results, algorithm):
         'mean_cliff': mean_cliff
     }]).set_index('pair')
 
-    # Число значимых побед (отдельно)
+    # Number of significant wins (separately)
     win_counts = pd.DataFrame([
         {'variant': 'ephemeral', 'significant_wins': n_ephemeral_faster},
         {'variant': 'ephemeral_path_comp', 'significant_wins': n_path_comp_faster}

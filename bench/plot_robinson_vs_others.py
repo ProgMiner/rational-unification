@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 """
-plot_robinson_vs_others.py
+Creates a scatter plot comparing median execution time of the robinson algorithm
+against rational and huet. Each point represents one test (trace).
+Axes: X = robinson time (median), Y = rational / huet time (median).
 
-Строит точечный график сравнения медианного времени алгоритма robinson
-с rational и huet. Каждая точка — один тест (trace).
-Оси: X = время robinson (медиана), Y = время rational / huet (медиана).
-
-Аргументы командной строки:
-    variant    – вариант (поддиректория в ./samples)
-    trace_set  – (опционально) набор трасс (поддиректория в ./traces)
-                 Если не указан, используются все имеющиеся trace_set.
+Command-line arguments:
+    variant    – variant (subdirectory in ./samples)
+    trace_set  – (optional) trace set (subdirectory in ./traces)
+                 If not specified, all available trace sets are used.
 """
 
 import sys
@@ -40,7 +38,7 @@ def print_usage():
     print('    If trace_set is omitted, all available trace sets are used.')
 
 def load_medians_for_trace_set(variant, trace_set):
-    """Загружает медианные времена для одного trace_set."""
+    """Loads median times for one trace_set."""
     traces_path = Path(TRACES_DIR) / trace_set
     if not traces_path.exists():
         print(f'Error: directory {traces_path} not found')
@@ -56,7 +54,7 @@ def load_medians_for_trace_set(variant, trace_set):
         rel_path = trace_file.relative_to(traces_path)
         trace_name = str(rel_path.with_suffix(''))
 
-        # Проверяем наличие результата для robinson (обязательное условие)
+        # Check for presence of robinson result (mandatory condition)
         rob_path = Path(SAMPLES_DIR) / variant / 'robinson' / trace_set / f'{trace_name}.tsv'
         if not rob_path.exists():
             continue
@@ -78,13 +76,13 @@ def load_medians_for_trace_set(variant, trace_set):
     return medians
 
 def load_all_medians(variant, trace_sets):
-    """Объединяет медианы из нескольких trace_set.
-    Возвращает общий словарь: ключ = 'trace_set::trace_name'."""
+    """Combines medians from multiple trace_set.
+    Returns a combined dictionary: key = 'trace_set::trace_name'."""
     all_medians = {}
     for ts in trace_sets:
         meds = load_medians_for_trace_set(variant, ts)
         for trace_name, trace_meds in meds.items():
-            # Добавляем префикс с именем trace_set, чтобы избежать коллизий имён
+            # Add prefix with trace_set name to avoid name collisions
             composite_name = f"{ts}::{trace_name}"
             all_medians[composite_name] = trace_meds
     return all_medians
@@ -115,7 +113,7 @@ def plot_comparison(medians, variant, trace_set_label):
         ax.scatter(xs, ys, c='red', alpha=0.7, label='huet',
                    edgecolors='k', linewidth=0.3)
 
-    # Линия y = x
+    # Line y = x
     all_times = []
     for _, meds in medians.items():
         all_times.extend(meds.values())
@@ -135,7 +133,7 @@ def plot_comparison(medians, variant, trace_set_label):
     ax.set_xscale('log')
     ax.set_yscale('log')
 
-    # Имя файла: заменяем '::' и недопустимые символы
+    # File name: replace '::' and invalid characters
     safe_label = trace_set_label.replace('::', '_').replace(' ', '_')
     out_name = f'robinson_comparison_{variant}_{safe_label}.png'
     plt.tight_layout()
@@ -153,7 +151,7 @@ def main():
         trace_sets = [sys.argv[2]]
         trace_set_label = sys.argv[2]
     else:
-        # Все доступные trace_set
+        # All available trace sets
         traces_dir = Path(TRACES_DIR)
         if not traces_dir.exists():
             print(f'Error: {TRACES_DIR} does not exist.')

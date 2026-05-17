@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Скрипт корректирует CPU affinity процессов, не являющихся потомками указанного PID.
-Если процесс не имеет в дереве родителей заданный PID (аргумент 1), и его affinity
-включает указанный номер CPU (аргумент 2), этот CPU удаляется из affinity.
+Script corrects CPU affinity of processes that are not children of a specified PID.
+If a process does not have the given PID in its parent tree (argument 1) and its affinity
+includes the specified CPU number (argument 2), this CPU is removed from affinity.
 
-Запуск (обычно от root):
-    python script.py <excluded_parent_pid> <cpu_to_remove>
+Usage (usually as root):
+    ./fix_affinity.py <excluded_parent_pid> <cpu_to_remove>
 """
 
 import sys
@@ -14,9 +14,9 @@ import psutil
 
 def has_ancestor(proc, target_pid):
     """
-    Поднимается вверх по дереву родителей (ppid) и проверяет, есть ли среди них target_pid.
-    Возвращает True, если target_pid найден или если проверить цепочку невозможно (ошибка).
-    Возвращает False, если достигнут init (pid 1) и target_pid не встретился.
+    Traverses up the parent process tree (ppid) and checks if target_pid is among them.
+    Returns True if target_pid is found or if the chain cannot be verified (error).
+    Returns False if init (pid 1) is reached and target_pid is not encountered.
     """
 
     while proc:

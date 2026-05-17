@@ -2,14 +2,14 @@
 """
 plot_huet_vs_rational.py
 
-Строит точечный график сравнения медианного времени алгоритмов huet и rational.
-Оси: X = время huet (медиана), Y = время rational (медиана).
-Каждая точка — один тест (trace). Алгоритм robinson игнорируется.
+Creates a scatter plot comparing median execution time of the huet and rational algorithms.
+Axes: X = huet time (median), Y = rational time (median).
+Each point represents one test (trace). The robinson algorithm is ignored.
 
-Аргументы командной строки:
-    variant    – вариант (поддиректория в ./samples)
-    trace_set  – (опционально) набор трасс (поддиректория в ./traces)
-                 Если не указан, используются все имеющиеся trace_set.
+Command-line arguments:
+    variant    – variant (subdirectory in ./samples)
+    trace_set  – (optional) trace set (subdirectory in ./traces)
+                 If not specified, all available trace sets are used.
 """
 
 import sys
@@ -20,7 +20,7 @@ from pathlib import Path
 
 TRACES_DIR = './traces'
 SAMPLES_DIR = './samples'
-# Интересуют только huet и rational
+# Only huet and rational are relevant
 ALGOS = ['huet', 'rational']
 
 def list_subdirs(path):
@@ -41,9 +41,9 @@ def print_usage():
     print('    If trace_set is omitted, all available trace sets are used.')
 
 def load_medians_for_trace_set(variant, trace_set):
-    """Загружает медианные времена huet и rational для одного trace_set.
-    Возвращает словарь: ключ = trace_name, значение = словарь с ключами 'huet','rational'.
-    Включаются только трейсы, где присутствуют оба алгоритма."""
+    """Loads median times for huet and rational for a single trace_set.
+    Returns a dictionary: key = trace_name, value = dictionary with keys 'huet','rational'.
+    Only traces where both algorithms are present are included."""
     traces_path = Path(TRACES_DIR) / trace_set
     if not traces_path.exists():
         print(f'Error: directory {traces_path} not found')
@@ -63,7 +63,7 @@ def load_medians_for_trace_set(variant, trace_set):
         for alg in ALGOS:
             file_path = Path(SAMPLES_DIR) / variant / alg / trace_set / f'{trace_name}.tsv'
             if not file_path.exists():
-                break   # если одного алг-ма нет – пропускаем трейс
+                 break   # if one algorithm is missing – skip the trace
             try:
                 df = pd.read_csv(file_path, sep='\t', header=None, names=['n', 'time'], index_col='n')
                 times = df['time'].dropna().values
@@ -74,14 +74,14 @@ def load_medians_for_trace_set(variant, trace_set):
             except Exception as e:
                 print(f'Warning: could not read {file_path}: {e}')
                 break
-        # Убеждаемся, что оба алгоритма загружены
+        # Ensure both algorithms are loaded
         if 'huet' in trace_meds and 'rational' in trace_meds:
             medians[trace_name] = trace_meds
     return medians
 
 def load_all_medians(variant, trace_sets):
-    """Объединяет медианы из нескольких trace_set.
-    Возвращает общий словарь: ключ = 'trace_set::trace_name'.
+    """Combines medians from multiple trace_set.
+    Returns a combined dictionary: key = 'trace_set::trace_name'.
     """
     all_medians = {}
     for ts in trace_sets:
@@ -106,7 +106,7 @@ def plot_comparison(medians, variant, trace_set_label):
     ax.scatter(xs, ys, c='green', alpha=0.7, edgecolors='k', linewidth=0.3,
                label=f'{len(points)} traces')
 
-    # Линия y = x
+    # Line y = x
     all_times = [m for p in points for m in (p[0], p[1])]
     if all_times:
         min_val = min(all_times) * 0.5
