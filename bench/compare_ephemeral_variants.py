@@ -191,7 +191,7 @@ def aggregate_results(results, algorithm):
 
     # Median ratio, geometric mean
     ratios = [r['ratio_median'] for r in results]
-    median_ratio = np.median(ratios)
+    median_ratio = np.mean(ratios)
     geom_mean_ratio = np.exp(np.mean(np.log(ratios)))
     cliffs = [r['cliff_delta'] for r in results]
     median_cliff = np.median(cliffs)

@@ -1,91 +1,17 @@
 Found 66 files
+Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test091.tsv
 ============================================================
-Results for trace: test027
-============================================================
-Median time (sec):
-  robinson                       : 342547.950000
-  rational                       : 266993.300000
-  huet                           : 167638.150000
-
-Kruskal-Wallis H-test: H = 180.1111, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test002
+Results for trace: test091
 ============================================================
 Median time (sec):
-  robinson                       : 4680.450000
-  rational                       : 4535.700000
-  huet                           : 2765.250000
+  rational                       : 981479.050000
+  huet                           : 616853.150000
 
-Kruskal-Wallis H-test: H = 216.3417, p-value = 0.000000
+Kruskal-Wallis H-test: H = 104.5126, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0  0.000000  0.000000
-rational   0.0  1.000000  0.000112
-robinson   0.0  0.000112  1.000000
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000112
-
-============================================================
-Results for trace: test012
-============================================================
-Median time (sec):
-  robinson                       : 28634.700000
-  rational                       : 20218.050000
-  huet                           : 12726.150000
-
-Kruskal-Wallis H-test: H = 265.7809, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test084
-============================================================
-Median time (sec):
-  robinson                       : 21766.100000
-  rational                       : 16039.300000
-  huet                           : 10033.400000
-
-Kruskal-Wallis H-test: H = 265.7808, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.591
 
 ============================================================
 Results for trace: test009
@@ -110,14 +36,14 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test021
+Results for trace: test004
 ============================================================
 Median time (sec):
-  robinson                       : 2314.700000
-  rational                       : 2523.450000
-  huet                           : 1659.750000
+  robinson                       : 4758.750000
+  rational                       : 4499.800000
+  huet                           : 2881.600000
 
-Kruskal-Wallis H-test: H = 237.4123, p-value = 0.000000
+Kruskal-Wallis H-test: H = 235.2215, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -130,86 +56,6 @@ Statistically significant differences between pairs (p < 0.05):
   huet vs rational : p = 0.000000
   huet vs robinson : p = 0.000000
   rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test010
-============================================================
-Median time (sec):
-  robinson                       : 924.300000
-  rational                       : 1126.850000
-  huet                           : 751.000000
-
-Kruskal-Wallis H-test: H = 265.7813, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test097
-============================================================
-Median time (sec):
-  robinson                       : 27053.800000
-  rational                       : 21731.700000
-  huet                           : 13341.500000
-
-Kruskal-Wallis H-test: H = 265.7811, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test006
-============================================================
-Median time (sec):
-  robinson                       : 37630.950000
-  rational                       : 25179.650000
-  huet                           : 15810.000000
-
-Kruskal-Wallis H-test: H = 265.7809, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test092.tsv
-============================================================
-Results for trace: test092
-============================================================
-Median time (sec):
-  rational                       : 1137514.100000
-  huet                           : 1078891.850000
-
-Kruskal-Wallis H-test: H = 70.6484, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
-  Median ratio (rational / huet) = 1.054
 
 ============================================================
 Results for trace: test040
@@ -234,350 +80,14 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test024
+Results for trace: test089
 ============================================================
 Median time (sec):
-  robinson                       : 13324.350000
-  rational                       : 10773.400000
-  huet                           : 6692.150000
+  robinson                       : 14518.500000
+  rational                       : 11397.500000
+  huet                           : 7017.050000
 
-Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test018
-============================================================
-Median time (sec):
-  robinson                       : 4885.150000
-  rational                       : 4781.350000
-  huet                           : 2983.850000
-
-Kruskal-Wallis H-test: H = 213.8144, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0  0.000000  0.000000
-rational   0.0  1.000000  0.000425
-robinson   0.0  0.000425  1.000000
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000425
-
-============================================================
-Results for trace: test028
-============================================================
-Median time (sec):
-  robinson                       : 12970.500000
-  rational                       : 11295.800000
-  huet                           : 6798.250000
-
-Kruskal-Wallis H-test: H = 264.5904, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test110
-============================================================
-Median time (sec):
-  robinson                       : 209185.950000
-  rational                       : 144900.400000
-  huet                           : 92228.450000
-
-Kruskal-Wallis H-test: H = 149.7456, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test029
-============================================================
-Median time (sec):
-  robinson                       : 19741.250000
-  rational                       : 15462.250000
-  huet                           : 9561.550000
-
-Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test042.tsv
-============================================================
-Results for trace: test042
-============================================================
-Median time (sec):
-  rational                       : 258221.150000
-  huet                           : 172751.150000
-
-Kruskal-Wallis H-test: H = 101.3889, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
-  Median ratio (rational / huet) = 1.495
-
-============================================================
-Results for trace: test041
-============================================================
-Median time (sec):
-  robinson                       : 219266.350000
-  rational                       : 129584.050000
-  huet                           : 115526.950000
-
-Kruskal-Wallis H-test: H = 182.0873, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test093
-============================================================
-Median time (sec):
-  robinson                       : 29493.300000
-  rational                       : 20270.050000
-  huet                           : 12655.750000
-
-Kruskal-Wallis H-test: H = 265.7808, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test096.tsv
-============================================================
-Results for trace: test096
-============================================================
-Median time (sec):
-  rational                       : 102830.800000
-  huet                           : 76984.400000
-
-Kruskal-Wallis H-test: H = 52.4849, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
-  Median ratio (rational / huet) = 1.336
-
-============================================================
-Results for trace: test054
-============================================================
-Median time (sec):
-  robinson                       : 151621.150000
-  rational                       : 89792.600000
-  huet                           : 86547.800000
-
-Kruskal-Wallis H-test: H = 149.8697, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-              huet  rational  robinson
-huet      1.000000  0.000207       0.0
-rational  0.000207  1.000000       0.0
-robinson  0.000000  0.000000       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000207
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test011
-============================================================
-Median time (sec):
-  robinson                       : 2482.000000
-  rational                       : 2761.750000
-  huet                           : 1704.150000
-
-Kruskal-Wallis H-test: H = 260.7510, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test083
-============================================================
-Median time (sec):
-  robinson                       : 24303.600000
-  rational                       : 20597.550000
-  huet                           : 11849.450000
-
-Kruskal-Wallis H-test: H = 265.7808, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test101
-============================================================
-Median time (sec):
-  robinson                       : 11879.800000
-  rational                       : 11377.650000
-  huet                           : 7124.750000
-
-Kruskal-Wallis H-test: H = 247.0040, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test046
-============================================================
-Median time (sec):
-  robinson                       : 3481074.050000
-  rational                       : 1311285.000000
-  huet                           : 1143323.550000
-
-Kruskal-Wallis H-test: H = 167.6798, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test074
-============================================================
-Median time (sec):
-  robinson                       : 23900.900000
-  rational                       : 16624.550000
-  huet                           : 10353.700000
-
-Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test050
-============================================================
-Median time (sec):
-  robinson                       : 13125.200000
-  rational                       : 12011.100000
-  huet                           : 7550.800000
-
-Kruskal-Wallis H-test: H = 258.6604, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test072
-============================================================
-Median time (sec):
-  robinson                       : 20306.750000
-  rational                       : 15409.750000
-  huet                           : 9832.150000
-
-Kruskal-Wallis H-test: H = 265.7809, p-value = 0.000000
+Kruskal-Wallis H-test: H = 265.7813, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -606,14 +116,14 @@ Only two algorithms with data. Significant difference confirmed by Kruskal-Walli
   Median ratio (rational / huet) = 1.345
 
 ============================================================
-Results for trace: test094
+Results for trace: test036
 ============================================================
 Median time (sec):
-  robinson                       : 24385.650000
-  rational                       : 20210.650000
-  huet                           : 12060.300000
+  robinson                       : 981757.950000
+  rational                       : 499391.500000
+  huet                           : 596786.300000
 
-Kruskal-Wallis H-test: H = 265.7811, p-value = 0.000000
+Kruskal-Wallis H-test: H = 175.8677, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -628,124 +138,72 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test026
+Results for trace: test016
 ============================================================
 Median time (sec):
-  robinson                       : 446159.600000
-  rational                       : 361066.150000
-  huet                           : 199019.850000
+  robinson                       : 2376.300000
+  rational                       : 2524.300000
+  huet                           : 1584.300000
 
-Kruskal-Wallis H-test: H = 199.1409, p-value = 0.000000
+Kruskal-Wallis H-test: H = 226.4585, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
           huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
+huet       1.0  0.000000  0.000000
+rational   0.0  1.000000  0.000001
+robinson   0.0  0.000001  1.000000
 
 Statistically significant differences between pairs (p < 0.05):
   huet vs rational : p = 0.000000
   huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000001
 
+Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test042.tsv
 ============================================================
-Results for trace: test104
+Results for trace: test042
 ============================================================
 Median time (sec):
-  robinson                       : 2245.800000
-  rational                       : 2371.900000
-  huet                           : 1531.650000
+  rational                       : 258221.150000
+  huet                           : 172751.150000
 
-Kruskal-Wallis H-test: H = 230.2958, p-value = 0.000000
+Kruskal-Wallis H-test: H = 101.3889, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.495
+
+============================================================
+Results for trace: test001
+============================================================
+Median time (sec):
+  robinson                       : 4542.150000
+  rational                       : 4386.700000
+  huet                           : 2705.600000
+
+Kruskal-Wallis H-test: H = 219.3188, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
           huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
+huet       1.0  0.000000  0.000000
+rational   0.0  1.000000  0.000023
+robinson   0.0  0.000023  1.000000
 
 Statistically significant differences between pairs (p < 0.05):
   huet vs rational : p = 0.000000
   huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000023
 
 ============================================================
-Results for trace: test007
-============================================================
-Median time (sec):
-  robinson                       : 882.850000
-  rational                       : 1109.150000
-  huet                           : 736.150000
-
-Kruskal-Wallis H-test: H = 265.7820, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test077
+Results for trace: test110
 ============================================================
 Median time (sec):
-  robinson                       : 176957.600000
-  rational                       : 126807.750000
-  huet                           : 105421.000000
+  robinson                       : 209185.950000
+  rational                       : 144900.400000
+  huet                           : 92228.450000
 
-Kruskal-Wallis H-test: H = 139.7373, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test106
-============================================================
-Median time (sec):
-  robinson                       : 80225.400000
-  rational                       : 76286.500000
-  huet                           : 51640.200000
-
-Kruskal-Wallis H-test: H = 162.3804, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test003
-============================================================
-Median time (sec):
-  robinson                       : 12997.400000
-  rational                       : 10750.050000
-  huet                           : 6739.550000
-
-Kruskal-Wallis H-test: H = 265.7813, p-value = 0.000000
+Kruskal-Wallis H-test: H = 149.7456, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -782,14 +240,14 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test036
+Results for trace: test028
 ============================================================
 Median time (sec):
-  robinson                       : 981757.950000
-  rational                       : 499391.500000
-  huet                           : 596786.300000
+  robinson                       : 12970.500000
+  rational                       : 11295.800000
+  huet                           : 6798.250000
 
-Kruskal-Wallis H-test: H = 175.8677, p-value = 0.000000
+Kruskal-Wallis H-test: H = 264.5904, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -804,36 +262,14 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test014
+Results for trace: test072
 ============================================================
 Median time (sec):
-  robinson                       : 2255.200000
-  rational                       : 2340.500000
-  huet                           : 1573.750000
+  robinson                       : 20306.750000
+  rational                       : 15409.750000
+  huet                           : 9832.150000
 
-Kruskal-Wallis H-test: H = 219.1446, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0  0.000000  0.000000
-rational   0.0  1.000000  0.000026
-robinson   0.0  0.000026  1.000000
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000026
-
-============================================================
-Results for trace: test022
-============================================================
-Median time (sec):
-  robinson                       : 2255.250000
-  rational                       : 2443.750000
-  huet                           : 1515.900000
-
-Kruskal-Wallis H-test: H = 244.9781, p-value = 0.000000
+Kruskal-Wallis H-test: H = 265.7809, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -848,80 +284,14 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test100
+Results for trace: test003
 ============================================================
 Median time (sec):
-  robinson                       : 12045.700000
-  rational                       : 11294.900000
-  huet                           : 6888.300000
+  robinson                       : 12997.400000
+  rational                       : 10750.050000
+  huet                           : 6739.550000
 
-Kruskal-Wallis H-test: H = 252.7266, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test008
-============================================================
-Median time (sec):
-  robinson                       : 880.450000
-  rational                       : 1091.800000
-  huet                           : 732.450000
-
-Kruskal-Wallis H-test: H = 265.7819, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test073
-============================================================
-Median time (sec):
-  robinson                       : 13882.100000
-  rational                       : 11271.950000
-  huet                           : 6906.300000
-
-Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test025
-============================================================
-Median time (sec):
-  robinson                       : 194489.450000
-  rational                       : 134647.050000
-  huet                           : 109926.200000
-
-Kruskal-Wallis H-test: H = 265.7807, p-value = 0.000000
+Kruskal-Wallis H-test: H = 265.7813, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -958,14 +328,58 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test102
+Results for trace: test046
 ============================================================
 Median time (sec):
-  robinson                       : 9752.250000
-  rational                       : 9149.900000
-  huet                           : 5568.950000
+  robinson                       : 3481074.050000
+  rational                       : 1311285.000000
+  huet                           : 1143323.550000
 
-Kruskal-Wallis H-test: H = 250.4871, p-value = 0.000000
+Kruskal-Wallis H-test: H = 167.6798, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test093
+============================================================
+Median time (sec):
+  robinson                       : 29493.300000
+  rational                       : 20270.050000
+  huet                           : 12655.750000
+
+Kruskal-Wallis H-test: H = 265.7808, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test045
+============================================================
+Median time (sec):
+  robinson                       : 1492985.000000
+  rational                       : 768411.350000
+  huet                           : 631582.000000
+
+Kruskal-Wallis H-test: H = 167.9197, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -1002,14 +416,14 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test023
+Results for trace: test012
 ============================================================
 Median time (sec):
-  robinson                       : 2300.500000
-  rational                       : 2559.350000
-  huet                           : 1606.850000
+  robinson                       : 28634.700000
+  rational                       : 20218.050000
+  huet                           : 12726.150000
 
-Kruskal-Wallis H-test: H = 242.9308, p-value = 0.000000
+Kruskal-Wallis H-test: H = 265.7809, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -1046,36 +460,138 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test001
+Results for trace: test007
 ============================================================
 Median time (sec):
-  robinson                       : 4542.150000
-  rational                       : 4386.700000
-  huet                           : 2705.600000
+  robinson                       : 882.850000
+  rational                       : 1109.150000
+  huet                           : 736.150000
 
-Kruskal-Wallis H-test: H = 219.3188, p-value = 0.000000
+Kruskal-Wallis H-test: H = 265.7820, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
           huet  rational  robinson
-huet       1.0  0.000000  0.000000
-rational   0.0  1.000000  0.000023
-robinson   0.0  0.000023  1.000000
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
 
 Statistically significant differences between pairs (p < 0.05):
   huet vs rational : p = 0.000000
   huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000023
+  rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test098
+Results for trace: test021
 ============================================================
 Median time (sec):
-  robinson                       : 33545.500000
-  rational                       : 30062.950000
-  huet                           : 17949.850000
+  robinson                       : 2314.700000
+  rational                       : 2523.450000
+  huet                           : 1659.750000
 
-Kruskal-Wallis H-test: H = 265.7543, p-value = 0.000000
+Kruskal-Wallis H-test: H = 237.4123, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test092.tsv
+============================================================
+Results for trace: test092
+============================================================
+Median time (sec):
+  rational                       : 1137514.100000
+  huet                           : 1078891.850000
+
+Kruskal-Wallis H-test: H = 70.6484, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.054
+
+============================================================
+Results for trace: test104
+============================================================
+Median time (sec):
+  robinson                       : 2245.800000
+  rational                       : 2371.900000
+  huet                           : 1531.650000
+
+Kruskal-Wallis H-test: H = 230.2958, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test074
+============================================================
+Median time (sec):
+  robinson                       : 23900.900000
+  rational                       : 16624.550000
+  huet                           : 10353.700000
+
+Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test027
+============================================================
+Median time (sec):
+  robinson                       : 342547.950000
+  rational                       : 266993.300000
+  huet                           : 167638.150000
+
+Kruskal-Wallis H-test: H = 180.1111, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test006
+============================================================
+Median time (sec):
+  robinson                       : 37630.950000
+  rational                       : 25179.650000
+  huet                           : 15810.000000
+
+Kruskal-Wallis H-test: H = 265.7809, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -1133,6 +649,246 @@ Statistically significant differences between pairs (p < 0.05):
   huet vs robinson : p = 0.000000
   rational vs robinson : p = 0.000000
 
+Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test086.tsv
+============================================================
+Results for trace: test086
+============================================================
+Median time (sec):
+  rational                       : 280376.900000
+  huet                           : 171544.300000
+
+Kruskal-Wallis H-test: H = 108.1405, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.634
+
+============================================================
+Results for trace: test097
+============================================================
+Median time (sec):
+  robinson                       : 27053.800000
+  rational                       : 21731.700000
+  huet                           : 13341.500000
+
+Kruskal-Wallis H-test: H = 265.7811, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test002
+============================================================
+Median time (sec):
+  robinson                       : 4680.450000
+  rational                       : 4535.700000
+  huet                           : 2765.250000
+
+Kruskal-Wallis H-test: H = 216.3417, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0  0.000000  0.000000
+rational   0.0  1.000000  0.000112
+robinson   0.0  0.000112  1.000000
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000112
+
+============================================================
+Results for trace: test094
+============================================================
+Median time (sec):
+  robinson                       : 24385.650000
+  rational                       : 20210.650000
+  huet                           : 12060.300000
+
+Kruskal-Wallis H-test: H = 265.7811, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test096.tsv
+============================================================
+Results for trace: test096
+============================================================
+Median time (sec):
+  rational                       : 102830.800000
+  huet                           : 76984.400000
+
+Kruskal-Wallis H-test: H = 52.4849, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.336
+
+============================================================
+Results for trace: test100
+============================================================
+Median time (sec):
+  robinson                       : 12045.700000
+  rational                       : 11294.900000
+  huet                           : 6888.300000
+
+Kruskal-Wallis H-test: H = 252.7266, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test088.tsv
+============================================================
+Results for trace: test088
+============================================================
+Median time (sec):
+  rational                       : 84675.800000
+  huet                           : 50078.650000
+
+Kruskal-Wallis H-test: H = 50.2090, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
+  Median ratio (rational / huet) = 1.691
+
+============================================================
+Results for trace: test073
+============================================================
+Median time (sec):
+  robinson                       : 13882.100000
+  rational                       : 11271.950000
+  huet                           : 6906.300000
+
+Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test020
+============================================================
+Median time (sec):
+  robinson                       : 2287.050000
+  rational                       : 2429.250000
+  huet                           : 1545.150000
+
+Kruskal-Wallis H-test: H = 227.3572, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test098
+============================================================
+Median time (sec):
+  robinson                       : 33545.500000
+  rational                       : 30062.950000
+  huet                           : 17949.850000
+
+Kruskal-Wallis H-test: H = 265.7543, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test010
+============================================================
+Median time (sec):
+  robinson                       : 924.300000
+  rational                       : 1126.850000
+  huet                           : 751.000000
+
+Kruskal-Wallis H-test: H = 265.7813, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test103
+============================================================
+Median time (sec):
+  robinson                       : 2274.300000
+  rational                       : 2408.950000
+  huet                           : 1494.500000
+
+Kruskal-Wallis H-test: H = 225.1342, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0  0.000000  0.000000
+rational   0.0  1.000000  0.000001
+robinson   0.0  0.000001  1.000000
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000001
+
 ============================================================
 Results for trace: test013
 ============================================================
@@ -1156,92 +912,26 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test089
+Results for trace: test018
 ============================================================
 Median time (sec):
-  robinson                       : 14518.500000
-  rational                       : 11397.500000
-  huet                           : 7017.050000
+  robinson                       : 4885.150000
+  rational                       : 4781.350000
+  huet                           : 2983.850000
 
-Kruskal-Wallis H-test: H = 265.7813, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test004
-============================================================
-Median time (sec):
-  robinson                       : 4758.750000
-  rational                       : 4499.800000
-  huet                           : 2881.600000
-
-Kruskal-Wallis H-test: H = 235.2215, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
-
-============================================================
-Results for trace: test016
-============================================================
-Median time (sec):
-  robinson                       : 2376.300000
-  rational                       : 2524.300000
-  huet                           : 1584.300000
-
-Kruskal-Wallis H-test: H = 226.4585, p-value = 0.000000
+Kruskal-Wallis H-test: H = 213.8144, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
           huet  rational  robinson
 huet       1.0  0.000000  0.000000
-rational   0.0  1.000000  0.000001
-robinson   0.0  0.000001  1.000000
+rational   0.0  1.000000  0.000425
+robinson   0.0  0.000425  1.000000
 
 Statistically significant differences between pairs (p < 0.05):
   huet vs rational : p = 0.000000
   huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000001
-
-============================================================
-Results for trace: test045
-============================================================
-Median time (sec):
-  robinson                       : 1492985.000000
-  rational                       : 768411.350000
-  huet                           : 631582.000000
-
-Kruskal-Wallis H-test: H = 167.9197, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Post-hoc Dunn test (p-values, Bonferroni corrected):
-          huet  rational  robinson
-huet       1.0       0.0       0.0
-rational   0.0       1.0       0.0
-robinson   0.0       0.0       1.0
-
-Statistically significant differences between pairs (p < 0.05):
-  huet vs rational : p = 0.000000
-  huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000425
 
 ============================================================
 Results for trace: test107
@@ -1265,27 +955,277 @@ Statistically significant differences between pairs (p < 0.05):
   huet vs robinson : p = 0.000000
   rational vs robinson : p = 0.000000
 
-Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test086.tsv
 ============================================================
-Results for trace: test086
+Results for trace: test029
 ============================================================
 Median time (sec):
-  rational                       : 280376.900000
-  huet                           : 171544.300000
+  robinson                       : 19741.250000
+  rational                       : 15462.250000
+  huet                           : 9561.550000
 
-Kruskal-Wallis H-test: H = 108.1405, p-value = 0.000000
+Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
-Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
-  Median ratio (rational / huet) = 1.634
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
 
 ============================================================
-Results for trace: test099
+Results for trace: test008
 ============================================================
 Median time (sec):
-  robinson                       : 41385.350000
-  rational                       : 27298.100000
-  huet                           : 17425.200000
+  robinson                       : 880.450000
+  rational                       : 1091.800000
+  huet                           : 732.450000
+
+Kruskal-Wallis H-test: H = 265.7819, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test050
+============================================================
+Median time (sec):
+  robinson                       : 13125.200000
+  rational                       : 12011.100000
+  huet                           : 7550.800000
+
+Kruskal-Wallis H-test: H = 258.6604, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test106
+============================================================
+Median time (sec):
+  robinson                       : 80225.400000
+  rational                       : 76286.500000
+  huet                           : 51640.200000
+
+Kruskal-Wallis H-test: H = 162.3804, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test101
+============================================================
+Median time (sec):
+  robinson                       : 11879.800000
+  rational                       : 11377.650000
+  huet                           : 7124.750000
+
+Kruskal-Wallis H-test: H = 247.0040, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test102
+============================================================
+Median time (sec):
+  robinson                       : 9752.250000
+  rational                       : 9149.900000
+  huet                           : 5568.950000
+
+Kruskal-Wallis H-test: H = 250.4871, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test011
+============================================================
+Median time (sec):
+  robinson                       : 2482.000000
+  rational                       : 2761.750000
+  huet                           : 1704.150000
+
+Kruskal-Wallis H-test: H = 260.7510, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test023
+============================================================
+Median time (sec):
+  robinson                       : 2300.500000
+  rational                       : 2559.350000
+  huet                           : 1606.850000
+
+Kruskal-Wallis H-test: H = 242.9308, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test022
+============================================================
+Median time (sec):
+  robinson                       : 2255.250000
+  rational                       : 2443.750000
+  huet                           : 1515.900000
+
+Kruskal-Wallis H-test: H = 244.9781, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test025
+============================================================
+Median time (sec):
+  robinson                       : 194489.450000
+  rational                       : 134647.050000
+  huet                           : 109926.200000
+
+Kruskal-Wallis H-test: H = 265.7807, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test026
+============================================================
+Median time (sec):
+  robinson                       : 446159.600000
+  rational                       : 361066.150000
+  huet                           : 199019.850000
+
+Kruskal-Wallis H-test: H = 199.1409, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test024
+============================================================
+Median time (sec):
+  robinson                       : 13324.350000
+  rational                       : 10773.400000
+  huet                           : 6692.150000
+
+Kruskal-Wallis H-test: H = 265.7810, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test083
+============================================================
+Median time (sec):
+  robinson                       : 24303.600000
+  rational                       : 20597.550000
+  huet                           : 11849.450000
 
 Kruskal-Wallis H-test: H = 265.7808, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
@@ -1298,6 +1238,28 @@ robinson   0.0       0.0       1.0
 
 Statistically significant differences between pairs (p < 0.05):
   huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test054
+============================================================
+Median time (sec):
+  robinson                       : 151621.150000
+  rational                       : 89792.600000
+  huet                           : 86547.800000
+
+Kruskal-Wallis H-test: H = 149.8697, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+              huet  rational  robinson
+huet      1.000000  0.000207       0.0
+rational  0.000207  1.000000       0.0
+robinson  0.000000  0.000000       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000207
   huet vs robinson : p = 0.000000
   rational vs robinson : p = 0.000000
 
@@ -1324,14 +1286,14 @@ Statistically significant differences between pairs (p < 0.05):
   rational vs robinson : p = 0.000011
 
 ============================================================
-Results for trace: test020
+Results for trace: test099
 ============================================================
 Median time (sec):
-  robinson                       : 2287.050000
-  rational                       : 2429.250000
-  huet                           : 1545.150000
+  robinson                       : 41385.350000
+  rational                       : 27298.100000
+  huet                           : 17425.200000
 
-Kruskal-Wallis H-test: H = 227.3572, p-value = 0.000000
+Kruskal-Wallis H-test: H = 265.7808, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
@@ -1345,133 +1307,171 @@ Statistically significant differences between pairs (p < 0.05):
   huet vs robinson : p = 0.000000
   rational vs robinson : p = 0.000000
 
-Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test091.tsv
 ============================================================
-Results for trace: test091
-============================================================
-Median time (sec):
-  rational                       : 981479.050000
-  huet                           : 616853.150000
-
-Kruskal-Wallis H-test: H = 104.5126, p-value = 0.000000
-  -> Reject H0: there are statistically significant differences between algorithms.
-
-Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
-  Median ratio (rational / huet) = 1.591
-
-============================================================
-Results for trace: test103
+Results for trace: test014
 ============================================================
 Median time (sec):
-  robinson                       : 2274.300000
-  rational                       : 2408.950000
-  huet                           : 1494.500000
+  robinson                       : 2255.200000
+  rational                       : 2340.500000
+  huet                           : 1573.750000
 
-Kruskal-Wallis H-test: H = 225.1342, p-value = 0.000000
+Kruskal-Wallis H-test: H = 219.1446, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
 Post-hoc Dunn test (p-values, Bonferroni corrected):
           huet  rational  robinson
 huet       1.0  0.000000  0.000000
-rational   0.0  1.000000  0.000001
-robinson   0.0  0.000001  1.000000
+rational   0.0  1.000000  0.000026
+robinson   0.0  0.000026  1.000000
 
 Statistically significant differences between pairs (p < 0.05):
   huet vs rational : p = 0.000000
   huet vs robinson : p = 0.000000
-  rational vs robinson : p = 0.000001
+  rational vs robinson : p = 0.000026
 
-Warning: file not found samples/ephemeral_path_comp/robinson/Lama/test088.tsv
 ============================================================
-Results for trace: test088
+Results for trace: test041
 ============================================================
 Median time (sec):
-  rational                       : 84675.800000
-  huet                           : 50078.650000
+  robinson                       : 219266.350000
+  rational                       : 129584.050000
+  huet                           : 115526.950000
 
-Kruskal-Wallis H-test: H = 50.2090, p-value = 0.000000
+Kruskal-Wallis H-test: H = 182.0873, p-value = 0.000000
   -> Reject H0: there are statistically significant differences between algorithms.
 
-Only two algorithms with data. Significant difference confirmed by Kruskal-Wallis.
-  Median ratio (rational / huet) = 1.691
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test084
+============================================================
+Median time (sec):
+  robinson                       : 21766.100000
+  rational                       : 16039.300000
+  huet                           : 10033.400000
+
+Kruskal-Wallis H-test: H = 265.7808, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
+
+============================================================
+Results for trace: test077
+============================================================
+Median time (sec):
+  robinson                       : 176957.600000
+  rational                       : 126807.750000
+  huet                           : 105421.000000
+
+Kruskal-Wallis H-test: H = 139.7373, p-value = 0.000000
+  -> Reject H0: there are statistically significant differences between algorithms.
+
+Post-hoc Dunn test (p-values, Bonferroni corrected):
+          huet  rational  robinson
+huet       1.0       0.0       0.0
+rational   0.0       1.0       0.0
+robinson   0.0       0.0       1.0
+
+Statistically significant differences between pairs (p < 0.05):
+  huet vs rational : p = 0.000000
+  huet vs robinson : p = 0.000000
+  rational vs robinson : p = 0.000000
 
 Tests processed: 66
 === By trace ===
-            p_kruskal                                       significant_wins  median_robinson  median_rational  median_huet
+            p_kruskal                                       significant_wins  median_rational  median_huet  median_robinson
 trace                                                                                                                      
-test027  7.751302e-40  huet > rational; huet > robinson; rational > robinson        342547.95        266993.30    167638.15
-test002  1.051948e-47  huet > rational; huet > robinson; rational > robinson          4680.45          4535.70      2765.25
-test012  1.933789e-58  huet > rational; huet > robinson; rational > robinson         28634.70         20218.05     12726.15
-test084  1.933846e-58  huet > rational; huet > robinson; rational > robinson         21766.10         16039.30     10033.40
-test009  3.414636e-58  huet > rational; huet > robinson; robinson > rational           908.00          1130.25       753.30
-test021  2.796216e-52  huet > rational; huet > robinson; robinson > rational          2314.70          2523.45      1659.75
-test010  1.933389e-58  huet > rational; huet > robinson; robinson > rational           924.30          1126.85       751.00
-test097  1.933618e-58  huet > rational; huet > robinson; rational > robinson         27053.80         21731.70     13341.50
-test006  1.933789e-58  huet > rational; huet > robinson; rational > robinson         37630.95         25179.65     15810.00
-test092  4.269228e-17                                        huet > rational              NaN       1137514.10   1078891.85
-test040  1.056325e-43  huet > rational; huet > robinson; rational > robinson       1413707.50        754371.15    507437.70
-test024  1.933675e-58  huet > rational; huet > robinson; rational > robinson         13324.35         10773.40      6692.15
-test018  3.722077e-47  huet > rational; huet > robinson; rational > robinson          4885.15          4781.35      2983.85
-test028  3.506921e-58  huet > rational; huet > robinson; rational > robinson         12970.50         11295.80      6798.25
-test110  3.042023e-33  huet > rational; huet > robinson; rational > robinson        209185.95        144900.40     92228.45
-test029  1.933732e-58  huet > rational; huet > robinson; rational > robinson         19741.25         15462.25      9561.55
-test042  7.558611e-24                                        huet > rational              NaN        258221.15    172751.15
-test041  2.885640e-40  huet > rational; huet > robinson; rational > robinson        219266.35        129584.05    115526.95
-test093  1.933903e-58  huet > rational; huet > robinson; rational > robinson         29493.30         20270.05     12655.75
-test096  4.335636e-13                                        huet > rational              NaN        102830.80     76984.40
-test054  2.858936e-33  huet > rational; huet > robinson; rational > robinson        151621.15         89792.60     86547.80
-test011  2.391292e-57  huet > rational; huet > robinson; robinson > rational          2482.00          2761.75      1704.15
-test083  1.933846e-58  huet > rational; huet > robinson; rational > robinson         24303.60         20597.55     11849.45
-test101  2.310832e-54  huet > rational; huet > robinson; rational > robinson         11879.80         11377.65      7124.75
-test046  3.879745e-37  huet > rational; huet > robinson; rational > robinson       3481074.05       1311285.00   1143323.55
-test074  1.933732e-58  huet > rational; huet > robinson; rational > robinson         23900.90         16624.55     10353.70
-test050  6.801447e-57  huet > rational; huet > robinson; rational > robinson         13125.20         12011.10      7550.80
-test072  1.933789e-58  huet > rational; huet > robinson; rational > robinson         20306.75         15409.75      9832.15
-test085  2.366302e-22                                        huet > rational              NaN        792244.35    589064.50
-test094  1.933561e-58  huet > rational; huet > robinson; rational > robinson         24385.65         20210.65     12060.30
-test026  5.716109e-44  huet > rational; huet > robinson; rational > robinson        446159.60        361066.15    199019.85
-test104  9.815205e-51  huet > rational; huet > robinson; robinson > rational          2245.80          2371.90      1531.65
-test007  1.932704e-58  huet > rational; huet > robinson; robinson > rational           882.85          1109.15       736.15
-test077  4.533462e-31  huet > rational; huet > robinson; rational > robinson        176957.60        126807.75    105421.00
-test106  5.489647e-36  huet > rational; huet > robinson; rational > robinson         80225.40         76286.50     51640.20
-test003  1.933446e-58  huet > rational; huet > robinson; rational > robinson         12997.40         10750.05      6739.55
-test105  1.851799e-57  huet > rational; huet > robinson; rational > robinson         19514.90         18105.45     11318.80
-test036  6.468702e-39  rational > huet; huet > robinson; rational > robinson        981757.95        499391.50    596786.30
-test014  2.590388e-48  huet > rational; huet > robinson; robinson > rational          2255.20          2340.50      1573.75
-test022  6.363353e-54  huet > rational; huet > robinson; robinson > rational          2255.25          2443.75      1515.90
-test100  1.321679e-55  huet > rational; huet > robinson; rational > robinson         12045.70         11294.90      6888.30
-test008  1.932876e-58  huet > rational; huet > robinson; robinson > rational           880.45          1091.80       732.45
-test073  1.933732e-58  huet > rational; huet > robinson; rational > robinson         13882.10         11271.95      6906.30
-test025  1.933960e-58  huet > rational; huet > robinson; rational > robinson        194489.45        134647.05    109926.20
-test015  5.131861e-54  huet > rational; huet > robinson; robinson > rational          2249.85          2448.45      1524.20
-test102  4.049549e-55  huet > rational; huet > robinson; rational > robinson          9752.25          9149.90      5568.95
-test095  5.264643e-53  huet > rational; huet > robinson; rational > robinson          5408.70          5103.95      3156.25
-test023  1.771141e-53  huet > rational; huet > robinson; robinson > rational          2300.50          2559.35      1606.85
-test034  1.390374e-33  huet > rational; huet > robinson; rational > robinson        184341.90        148582.15     98510.05
-test001  2.374276e-48  huet > rational; huet > robinson; rational > robinson          4542.15          4386.70      2705.60
-test098  1.959714e-58  huet > rational; huet > robinson; rational > robinson         33545.50         30062.95     17949.85
-test005  3.974693e-46  huet > rational; huet > robinson; rational > robinson          4532.85          4414.20      2753.55
-test019  2.588044e-58  huet > rational; huet > robinson; robinson > rational           887.25          1093.90       754.50
-test013  1.933903e-58  huet > rational; huet > robinson; rational > robinson         30450.20         20305.90     12570.50
-test089  1.933389e-58  huet > rational; huet > robinson; rational > robinson         14518.50         11397.50      7017.05
-test004  8.361607e-52  huet > rational; huet > robinson; rational > robinson          4758.75          4499.80      2881.60
-test016  6.685846e-50  huet > rational; huet > robinson; robinson > rational          2376.30          2524.30      1584.30
-test045  3.441162e-37  huet > rational; huet > robinson; rational > robinson       1492985.00        768411.35    631582.00
-test107  2.574565e-50  huet > rational; huet > robinson; robinson > rational          4580.00          4771.80      2937.45
-test086  2.503828e-25                                        huet > rational              NaN        280376.90    171544.30
-test099  1.933903e-58  huet > rational; huet > robinson; rational > robinson         41385.35         27298.10     17425.20
-test017  1.109175e-48  huet > rational; huet > robinson; robinson > rational          2318.40          2448.50      1509.75
-test020  4.265931e-50  huet > rational; huet > robinson; robinson > rational          2287.05          2429.25      1545.15
-test091  1.561991e-24                                        huet > rational              NaN        981479.05    616853.15
-test103  1.296384e-49  huet > rational; huet > robinson; robinson > rational          2274.30          2408.95      1494.50
-test088  1.382156e-12                                        huet > rational              NaN         84675.80     50078.65
+test091  1.561991e-24                                        huet > rational        981479.05    616853.15              NaN
+test009  3.414636e-58  huet > rational; huet > robinson; robinson > rational          1130.25       753.30           908.00
+test004  8.361607e-52  huet > rational; huet > robinson; rational > robinson          4499.80      2881.60          4758.75
+test040  1.056325e-43  huet > rational; huet > robinson; rational > robinson        754371.15    507437.70       1413707.50
+test089  1.933389e-58  huet > rational; huet > robinson; rational > robinson         11397.50      7017.05         14518.50
+test085  2.366302e-22                                        huet > rational        792244.35    589064.50              NaN
+test036  6.468702e-39  rational > huet; huet > robinson; rational > robinson        499391.50    596786.30        981757.95
+test016  6.685846e-50  huet > rational; huet > robinson; robinson > rational          2524.30      1584.30          2376.30
+test042  7.558611e-24                                        huet > rational        258221.15    172751.15              NaN
+test001  2.374276e-48  huet > rational; huet > robinson; rational > robinson          4386.70      2705.60          4542.15
+test110  3.042023e-33  huet > rational; huet > robinson; rational > robinson        144900.40     92228.45        209185.95
+test105  1.851799e-57  huet > rational; huet > robinson; rational > robinson         18105.45     11318.80         19514.90
+test028  3.506921e-58  huet > rational; huet > robinson; rational > robinson         11295.80      6798.25         12970.50
+test072  1.933789e-58  huet > rational; huet > robinson; rational > robinson         15409.75      9832.15         20306.75
+test003  1.933446e-58  huet > rational; huet > robinson; rational > robinson         10750.05      6739.55         12997.40
+test015  5.131861e-54  huet > rational; huet > robinson; robinson > rational          2448.45      1524.20          2249.85
+test046  3.879745e-37  huet > rational; huet > robinson; rational > robinson       1311285.00   1143323.55       3481074.05
+test093  1.933903e-58  huet > rational; huet > robinson; rational > robinson         20270.05     12655.75         29493.30
+test045  3.441162e-37  huet > rational; huet > robinson; rational > robinson        768411.35    631582.00       1492985.00
+test095  5.264643e-53  huet > rational; huet > robinson; rational > robinson          5103.95      3156.25          5408.70
+test012  1.933789e-58  huet > rational; huet > robinson; rational > robinson         20218.05     12726.15         28634.70
+test034  1.390374e-33  huet > rational; huet > robinson; rational > robinson        148582.15     98510.05        184341.90
+test007  1.932704e-58  huet > rational; huet > robinson; robinson > rational          1109.15       736.15           882.85
+test021  2.796216e-52  huet > rational; huet > robinson; robinson > rational          2523.45      1659.75          2314.70
+test092  4.269228e-17                                        huet > rational       1137514.10   1078891.85              NaN
+test104  9.815205e-51  huet > rational; huet > robinson; robinson > rational          2371.90      1531.65          2245.80
+test074  1.933732e-58  huet > rational; huet > robinson; rational > robinson         16624.55     10353.70         23900.90
+test027  7.751302e-40  huet > rational; huet > robinson; rational > robinson        266993.30    167638.15        342547.95
+test006  1.933789e-58  huet > rational; huet > robinson; rational > robinson         25179.65     15810.00         37630.95
+test005  3.974693e-46  huet > rational; huet > robinson; rational > robinson          4414.20      2753.55          4532.85
+test019  2.588044e-58  huet > rational; huet > robinson; robinson > rational          1093.90       754.50           887.25
+test086  2.503828e-25                                        huet > rational        280376.90    171544.30              NaN
+test097  1.933618e-58  huet > rational; huet > robinson; rational > robinson         21731.70     13341.50         27053.80
+test002  1.051948e-47  huet > rational; huet > robinson; rational > robinson          4535.70      2765.25          4680.45
+test094  1.933561e-58  huet > rational; huet > robinson; rational > robinson         20210.65     12060.30         24385.65
+test096  4.335636e-13                                        huet > rational        102830.80     76984.40              NaN
+test100  1.321679e-55  huet > rational; huet > robinson; rational > robinson         11294.90      6888.30         12045.70
+test088  1.382156e-12                                        huet > rational         84675.80     50078.65              NaN
+test073  1.933732e-58  huet > rational; huet > robinson; rational > robinson         11271.95      6906.30         13882.10
+test020  4.265931e-50  huet > rational; huet > robinson; robinson > rational          2429.25      1545.15          2287.05
+test098  1.959714e-58  huet > rational; huet > robinson; rational > robinson         30062.95     17949.85         33545.50
+test010  1.933389e-58  huet > rational; huet > robinson; robinson > rational          1126.85       751.00           924.30
+test103  1.296384e-49  huet > rational; huet > robinson; robinson > rational          2408.95      1494.50          2274.30
+test013  1.933903e-58  huet > rational; huet > robinson; rational > robinson         20305.90     12570.50         30450.20
+test018  3.722077e-47  huet > rational; huet > robinson; rational > robinson          4781.35      2983.85          4885.15
+test107  2.574565e-50  huet > rational; huet > robinson; robinson > rational          4771.80      2937.45          4580.00
+test029  1.933732e-58  huet > rational; huet > robinson; rational > robinson         15462.25      9561.55         19741.25
+test008  1.932876e-58  huet > rational; huet > robinson; robinson > rational          1091.80       732.45           880.45
+test050  6.801447e-57  huet > rational; huet > robinson; rational > robinson         12011.10      7550.80         13125.20
+test106  5.489647e-36  huet > rational; huet > robinson; rational > robinson         76286.50     51640.20         80225.40
+test101  2.310832e-54  huet > rational; huet > robinson; rational > robinson         11377.65      7124.75         11879.80
+test102  4.049549e-55  huet > rational; huet > robinson; rational > robinson          9149.90      5568.95          9752.25
+test011  2.391292e-57  huet > rational; huet > robinson; robinson > rational          2761.75      1704.15          2482.00
+test023  1.771141e-53  huet > rational; huet > robinson; robinson > rational          2559.35      1606.85          2300.50
+test022  6.363353e-54  huet > rational; huet > robinson; robinson > rational          2443.75      1515.90          2255.25
+test025  1.933960e-58  huet > rational; huet > robinson; rational > robinson        134647.05    109926.20        194489.45
+test026  5.716109e-44  huet > rational; huet > robinson; rational > robinson        361066.15    199019.85        446159.60
+test024  1.933675e-58  huet > rational; huet > robinson; rational > robinson         10773.40      6692.15         13324.35
+test083  1.933846e-58  huet > rational; huet > robinson; rational > robinson         20597.55     11849.45         24303.60
+test054  2.858936e-33  huet > rational; huet > robinson; rational > robinson         89792.60     86547.80        151621.15
+test017  1.109175e-48  huet > rational; huet > robinson; robinson > rational          2448.50      1509.75          2318.40
+test099  1.933903e-58  huet > rational; huet > robinson; rational > robinson         27298.10     17425.20         41385.35
+test014  2.590388e-48  huet > rational; huet > robinson; robinson > rational          2340.50      1573.75          2255.20
+test041  2.885640e-40  huet > rational; huet > robinson; rational > robinson        129584.05    115526.95        219266.35
+test084  1.933846e-58  huet > rational; huet > robinson; rational > robinson         16039.30     10033.40         21766.10
+test077  4.533462e-31  huet > rational; huet > robinson; rational > robinson        126807.75    105421.00        176957.60
 
 === By pair (aggregated) ===
                       A_faster_sig  B_faster_sig  non_sig  total_traces  median_ratio  geom_mean_ratio  median_cliff  mean_cliff
 pair                                                                                                                            
-robinson vs rational            17            42        0            59      1.115842         1.169936         0.804    0.386669
-robinson vs huet                 0            59        0            59      1.748719         1.782835         1.000    0.963085
-rational vs huet                 1            65        0            66      1.593048         1.514044         1.000    0.902642
+rational vs huet                 1            65        0            66      1.526564         1.514044         1.000    0.902642
+robinson vs rational            17            42        0            59      1.209290         1.169936         0.804    0.386669
+robinson vs huet                 0            59        0            59      1.823101         1.782835         1.000    0.963085
 
 === Total number of significant wins ===
            significant_wins

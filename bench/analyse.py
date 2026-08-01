@@ -247,7 +247,7 @@ def aggregate_results(results_list):
         n_b_faster = ((df['faster'] == b) & df['significant']).sum()
         n_not_sig = n_sig - n_a_faster - n_b_faster
 
-        median_ratio = df['ratio'].median()
+        median_ratio = df['ratio'].mean()
         geom_mean = np.exp(np.mean(np.log(df['ratio'])))
 
         median_cliff = df['cliff'].median()
