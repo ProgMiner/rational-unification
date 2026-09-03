@@ -132,14 +132,17 @@ def plot_bars(variant: str, trace_set: str, output_file: str = None, ymax: float
         return
 
     ax.set_xticks(x + width)
-    ax.set_xticklabels(filtered_traces, rotation=45, ha='right', fontsize=7)
+    ax.set_xticklabels(filtered_traces, rotation=30, ha='right', fontsize=7)
 
-    ax.set_xlabel('Trace')
-    ax.set_ylabel('Time (ns)')
+    ax.set_xlabel('Трасса', fontsize=24)
+    ax.set_ylabel('Время (нс)', fontsize=24)
 
     # ax.set_title(f"Algorithm comparison on '{trace_set}' (variant: {variant})")
-    ax.legend()
+    ax.legend(fontsize=24)
     ax.grid(True, axis='y', linestyle='--', alpha=0.6)
+
+    ax.yaxis.get_offset_text().set_fontsize(20)
+    ax.tick_params(axis='both', which='both', labelsize=20)
 
     plt.tight_layout()
 
