@@ -116,8 +116,8 @@ def plot_comparison(medians, variant, trace_set_label):
         ax.set_xlim(min_val, max_val)
         ax.set_ylim(min_val, max_val)
 
-    ax.set_xlabel('huet median time (s)')
-    ax.set_ylabel('rational median time (s)')
+    ax.set_xlabel('huet median time (ns)')
+    ax.set_ylabel('rational median time (ns)')
     ax.set_title(f'huet vs rational\n(variant={variant}, trace_set={trace_set_label})')
     ax.legend()
     ax.grid(True, alpha=0.3, which='both')

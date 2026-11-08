@@ -135,7 +135,7 @@ def plot_bars(variant: str, trace_set: str, output_file: str = None, ymax: float
     ax.set_xticklabels(filtered_traces, rotation=45, ha='right', fontsize=7)
 
     ax.set_xlabel('Trace')
-    ax.set_ylabel('Time (ms)')
+    ax.set_ylabel('Time (ns)')
 
     # ax.set_title(f"Algorithm comparison on '{trace_set}' (variant: {variant})")
     ax.legend()

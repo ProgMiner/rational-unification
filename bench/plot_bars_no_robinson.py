@@ -132,7 +132,7 @@ def plot_bars(variant: str, trace_set: str, output_file: str = None, ymax: float
     ax.set_xticklabels(filtered_traces, rotation=45, ha='right', fontsize=7)
 
     ax.set_xlabel('Trace')
-    ax.set_ylabel('Time (ms)')
+    ax.set_ylabel('Time (ns)')
 
     ax.legend()
     ax.grid(True, axis='y', linestyle='--', alpha=0.6)

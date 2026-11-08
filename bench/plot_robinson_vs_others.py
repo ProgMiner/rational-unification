@@ -125,8 +125,8 @@ def plot_comparison(medians, variant, trace_set_label):
         ax.set_xlim(min_val, max_val)
         ax.set_ylim(min_val, max_val)
 
-    ax.set_xlabel('robinson median time (ms)')
-    ax.set_ylabel('other algorithm median time (ms)')
+    ax.set_xlabel('robinson median time (ns)')
+    ax.set_ylabel('other algorithm median time (ns)')
     # ax.set_title(f'robinson vs rational / huet\n(variant={variant}, trace_set={trace_set_label})')
     ax.legend()
     ax.grid(True, alpha=0.3, which='both')
