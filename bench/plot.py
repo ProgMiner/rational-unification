@@ -165,7 +165,7 @@ def plot_scatter(variant: str, trace_set: str, output_file: str = None):
     ax.set_xticklabels(sorted_traces, rotation=45, ha='right', fontsize=7)
 
     ax.set_xlabel('Trace (sorted by min median)')
-    ax.set_ylabel('Time (seconds)')
+    ax.set_ylabel('Time (nanoseconds)')
 
     ax.set_title(f"Algorithm comparison on '{trace_set}' (variant: {variant})")
     ax.grid(True, linestyle='--', alpha=0.6)

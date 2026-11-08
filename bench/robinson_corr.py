@@ -260,8 +260,8 @@ def plot_results(datasets: dict, variant: str, output_file: str = None, show_err
         ax.set_xlim(x_min_adj, x_max_adj)
         ax.set_ylim(y_min_adj, y_max_adj)
     
-    ax.set_xlabel(f'Median time (sec) - {ROBINSON}', fontsize=12)
-    ax.set_ylabel('Median time (sec) - target algorithm', fontsize=12)
+    ax.set_xlabel(f'Median time (ns) - {ROBINSON}', fontsize=12)
+    ax.set_ylabel('Median time (ns) - target algorithm', fontsize=12)
     ax.set_title(f'Algorithm performance vs Robinson\n{variant} (all trace sets)', fontsize=14)
     ax.set_xscale('log')
     ax.set_yscale('log')

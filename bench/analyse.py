@@ -54,7 +54,7 @@ def compare_trace(var, trace_set, trace_name, alpha=0.05):
     print('Results for trace:', trace_name)
 
     print('='*60)
-    print('Median time (sec):')
+    print('Median time (ns):')
 
     for alg, med in medians.items():
         print(f'  {alg:30s} : {med:.6f}')

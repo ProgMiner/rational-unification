@@ -75,7 +75,7 @@ def compare_trace(algorithm, trace_set, trace_name, alpha=0.05):
                                       alternative='two-sided')
     print('='*60)
     print(f'Results for trace: {trace_name} (algorithm: {algorithm})')
-    print('Median time (sec):')
+    print('Median time (ns):')
     for var, med in medians.items():
         print(f'  {var:30s} : {med:.6f}')
     print(f'\nMann-Whitney U-test: U = {u_stat:.4f}, p-value = {p_mw:.6f}')
