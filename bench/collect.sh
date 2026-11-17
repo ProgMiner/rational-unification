@@ -22,6 +22,22 @@ if ! "$CHRT"; then
     }
 fi
 
+do_run() {
+    printf '%s       \t%s                \r' "$trace" "$3"
+
+    res="$SAMPLES_DIR/$3/$trace.tsv"
+    mkdir -p "$(dirname "$res")"
+
+    ./fix_affinity.py "$2" "$CPU"
+
+    ulimit -r unlimited
+
+    chrt -f 99 "$4" --cpu "$CPU" --quiet "$1" >"$res" || {
+        printf '%s       \t%s\terror\n' "$trace" "$3"
+        rm "$res"
+    }
+}
+
 if [ $# -ne 0 ] ; then
     file=$1
 
@@ -35,22 +51,11 @@ if [ $# -ne 0 ] ; then
             fi
 
             var_algo="$var/$algo"
-
-            printf '%s       \t%s                \r' "$trace" "$var_algo"
-
-            res="$SAMPLES_DIR/$var_algo/$trace.tsv"
-            mkdir -p "$(dirname "$res")"
-
-            ./fix_affinity.py "$2" "$CPU"
-
-            ulimit -r unlimited
-
-            chrt -f 99 "../_build/default/bench/impl/$var_algo.exe" --cpu "$CPU" --quiet "$1" >"$res" || {
-                printf '%s       \t%s\terror\n' "$trace" "$var_algo"
-                rm "$res"
-            }
+            do_run "$1" "$2" "$var_algo" "../_build/default/bench/impl/$var_algo.exe"
         done
     done
+
+    do_run "$1" "$2" 'swi_c/swi' './impl/swi_c/swi'
 
     exit 0
 fi
