@@ -13,7 +13,7 @@ for var in ephemeral ephemeral_path_comp persistent; do
 done
 
 mkdir -p ./reports/ephemeral-vs-ephemeral_path_comp
-for algo in robinson rational huet; do
+for algo in robinson rational huet swi; do
     echo $algo
     ./compare_ephemeral_variants.py $algo . >"./reports/ephemeral-vs-ephemeral_path_comp/$algo.txt"
 done

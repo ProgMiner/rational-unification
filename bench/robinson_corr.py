@@ -2,7 +2,7 @@
 """
 Script to build scatter plot with linear regression:
 - X axis: median time of Robinson algorithm
-- Y axis: median time of target algorithm (rational, huet)
+- Y axis: median time of target algorithm (rational, huet, swi)
 - Error bars (whiskers) show IQR (Q1, Q3)
 - Auto-merges all trace sets for given variant
 
@@ -21,10 +21,11 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent.resolve()
 SAMPLES_DIR = SCRIPT_DIR / 'samples'
 ROBINSON = 'robinson'
-TARGET_ALGOS = ['rational', 'huet']
+TARGET_ALGOS = ['rational', 'huet', 'swi']
 COLORS = {
     'rational': 'green',
-    'huet': 'red'
+    'huet': 'red',
+    'swi': 'purple'
 }
 
 

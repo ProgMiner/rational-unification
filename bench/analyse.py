@@ -14,7 +14,7 @@ from statsmodels.stats.multitest import multipletests
 
 TRACES_DIR = './traces'
 SAMPLES_DIR = './samples'
-ALGOS = ['robinson', 'rational', 'huet']
+ALGOS = ['robinson', 'rational', 'huet', 'swi']
 
 
 def compare_trace(var, trace_set, trace_name, alpha=0.05):

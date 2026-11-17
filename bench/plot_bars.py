@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script to generate a grouped bar chart for multiple algorithms across different traces.
-Each trace shows three columns: robinson, rational, huet (in this order).
+Each trace shows four columns: robinson, rational, huet, swi (in this order).
 
 Usage:
     ./plot_bars.py <variant> <trace_set> [--output OUTPUT]
@@ -20,8 +20,8 @@ from pathlib import Path
 
 TRACES_DIR = Path('./traces')
 SAMPLES_DIR = Path('./samples')
-ALGOS = ['robinson', 'rational', 'huet']
-COLORS = ['green', 'blue', 'red']
+ALGOS = ['robinson', 'rational', 'huet', 'swi']
+COLORS = ['green', 'blue', 'red', 'purple']
 
 
 def get_all_trace_names(trace_set: str) -> list:
@@ -170,7 +170,7 @@ def main():
     parser.add_argument('--ymax', type=float, default=None,
                         help='Maximum Y value for the plot.')
     parser.add_argument('--ignore-algo', type=str, default=None,
-                        help='Algorithm to ignore (robinson, rational, or huet).')
+                        help='Algorithm to ignore (robinson, rational, huet, or swi).')
     args = parser.parse_args()
 
     try:

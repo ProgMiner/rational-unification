@@ -22,11 +22,12 @@ from pathlib import Path
 # Constants based on the original script structure
 TRACES_DIR = Path('./traces')
 SAMPLES_DIR = Path('./samples')
-ALGOS = ['robinson', 'rational', 'huet']
+ALGOS = ['robinson', 'rational', 'huet', 'swi']
 COLORS = {
     'robinson': 'blue',
     'rational': 'green',
-    'huet': 'red'
+    'huet': 'red',
+    'swi': 'purple'
 }
 
 

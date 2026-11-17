@@ -2,7 +2,7 @@
 """
 Script to generate a grouped bar chart for multiple algorithms across different traces.
 Only includes traces that do NOT have a robinson run.
-Each trace shows two columns: rational, huet (in this order).
+Each trace shows three columns: rational, huet, swi (in this order).
 
 Usage:
     ./plot_bars_no_robinson.py <variant> <trace_set> [--output OUTPUT]
@@ -21,8 +21,8 @@ from pathlib import Path
 
 TRACES_DIR = Path('./traces')
 SAMPLES_DIR = Path('./samples')
-ALGOS = ['robinson', 'rational', 'huet']
-COLORS = ['green', 'blue', 'red']
+ALGOS = ['robinson', 'rational', 'huet', 'swi']
+COLORS = ['green', 'blue', 'red', 'purple']
 
 
 def get_all_trace_names(trace_set: str) -> list:
@@ -82,8 +82,8 @@ def plot_bars(variant: str, trace_set: str, output_file: str = None, ymax: float
         print("No traces found without robinson run. Exiting.")
         return
 
-    algorithms = ['rational', 'huet']
-    algo_to_color = {'robinson': 'green', 'rational': 'blue', 'huet': 'red'}
+    algorithms = ['rational', 'huet', 'swi']
+    algo_to_color = {'robinson': 'green', 'rational': 'blue', 'huet': 'red', 'swi': 'purple'}
 
     data = {trace: {} for trace in filtered_traces}
     has_any_data = False

@@ -1,8 +1,9 @@
 ## rational-unification/bench
 
-This directory contains practical implementations of the algorithm and two more algorithms:
-the Robinson's algorithm and the Huet's algorithm. These algorithms are implemented in several flavors:
-ephemeral, ephemeral with path compression and persistent.
+This directory contains practical implementations of the algorithm and three more algorithms:
+the Robinson's algorithm, the Huet's algorithm and its SWI-Prolog variant.
+These algorithms are implemented in several flavors: ephemeral, ephemeral with path compression
+and persistent.
 
 Also, there are traces collected from real-world relational programs and synthetic ones.
 For them, there are samples collected from the algorithms runs on the traces.
@@ -13,6 +14,13 @@ There are also some clarifying comments for them. They are not require any depen
 Traces could be studied manually using the script `./trace.py`:
 ```bash
 ./trace.py --print ./traces/JGS/TESTIV/18.trace
+```
+
+Also, one may check for semantic differences between different implementations using `./subst_diff.py`:
+```bash
+./subst_diff.py \
+    <(../_build/default/bench/impl/persistent/huet.exe --quiet --check ./traces/synth/left_right/n10.trace) \
+    <(../_build/default/bench/impl/ephemeral/swi.exe --quiet --check ./traces/synth/left_right/n10.trace)
 ```
 
 The samples are collected using the script on a clean Linux-based system,

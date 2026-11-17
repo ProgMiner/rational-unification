@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Creates a scatter plot comparing median execution time of the robinson algorithm
-against rational and huet. Each point represents one test (trace).
-Axes: X = robinson time (median), Y = rational / huet time (median).
+against rational, huet and swi. Each point represents one test (trace).
+Axes: X = robinson time (median), Y = rational / huet / swi time (median).
 
 Command-line arguments:
     variant    – variant (subdirectory in ./samples)
@@ -18,7 +18,7 @@ from pathlib import Path
 
 TRACES_DIR = './traces'
 SAMPLES_DIR = './samples'
-ALGOS = ['robinson', 'rational', 'huet']
+ALGOS = ['robinson', 'rational', 'huet', 'swi']
 
 def list_subdirs(path):
     if not isinstance(path, Path):
@@ -94,6 +94,7 @@ def plot_comparison(medians, variant, trace_set_label):
 
     points_rational = []   # (robinson_median, rational_median, label)
     points_huet = []
+    points_swi = []
 
     for trace_label, meds in medians.items():
         rob = meds['robinson']
@@ -101,6 +102,8 @@ def plot_comparison(medians, variant, trace_set_label):
             points_rational.append((rob, meds['rational'], trace_label))
         if 'huet' in meds:
             points_huet.append((rob, meds['huet'], trace_label))
+        if 'swi' in meds:
+            points_swi.append((rob, meds['swi'], trace_label))
 
     fig, ax = plt.subplots(figsize=(8, 8))
 
@@ -111,6 +114,10 @@ def plot_comparison(medians, variant, trace_set_label):
     if points_huet:
         xs, ys, names = zip(*points_huet)
         ax.scatter(xs, ys, c='red', alpha=0.7, label='huet',
+                   edgecolors='k', linewidth=0.3)
+    if points_swi:
+        xs, ys, names = zip(*points_swi)
+        ax.scatter(xs, ys, c='purple', alpha=0.7, label='swi',
                    edgecolors='k', linewidth=0.3)
 
     # Line y = x

@@ -11,7 +11,7 @@ CPU=4
 
 TRACES_DIR='./traces'
 SAMPLES_DIR='./samples'
-ALGOS='robinson rational huet'
+ALGOS='robinson rational huet swi'
 VARIANTS='ephemeral ephemeral_path_comp persistent'
 
 if ! "$CHRT"; then

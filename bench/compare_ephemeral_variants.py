@@ -7,7 +7,7 @@ For each trace (test), computes median times, performs Mann-Whitney test,
 calculates median ratio and Cliff's delta. Results are aggregated and displayed as tables.
 
 Command-line arguments:
-    algorithm  – one of: robinson, rational, huet
+    algorithm  – one of: robinson, rational, huet, swi
     trace_set  – (optional) trace set (subdirectory in ./traces)
                  If not specified, all available trace sets are used.
 """
@@ -25,7 +25,7 @@ from statsmodels.stats.multitest import multipletests
 TRACES_DIR = './traces'
 SAMPLES_DIR = './samples'
 VARIANTS = ['ephemeral', 'ephemeral_path_comp']
-ALGOS = ['robinson', 'rational', 'huet']
+ALGOS = ['robinson', 'rational', 'huet', 'swi']
 
 def list_subdirs(path):
     if not isinstance(path, Path):
