@@ -1,0 +1,42 @@
+=== Constant-factor check ===
+Implementations: swi vs swi_c
+Trace set: synth/left_right
+A root: samples/ephemeral/swi
+B root: samples/swi_c/swi
+
+     n          A ns          B ns       A/B
+     0         187.7          47.7      3.93
+    10        2097.7         661.2      3.17
+    20        4748.1        1506.8      3.15
+    30        7860.4        3118.7      2.52
+    40       11351.6        4660.9      2.44
+    50       15491.0        5668.3      2.73
+    60       19971.6        8595.0      2.32
+    70       25113.7       16165.5      1.55
+    80       30545.1       15023.4      2.03
+    90       36316.6       24894.3      1.46
+   100       43410.4       30093.8      1.44
+
+=== Polynomial fit (n > 0): log t = a + p log n ===
+p_swi: +1.3181
+p_swi_c: +1.6678
+p_swi - p_swi_c: -0.3498
+95% bootstrap CI for p gap: [-0.3529, -0.3446]
+AIC (poly): swi=-57.17, swi_c=-29.83
+
+=== Polynomial-exponential fit (n > 0): log t = a + p log n + k n ===
+p_swi: +1.1099; k_swi: +0.00530
+p_swi_c: +1.0117; k_swi_c: +0.01669
+k_swi - k_swi_c: -0.01140
+95% bootstrap CI for k gap: [-0.01174, -0.01110]
+95% CI k_swi: [+0.00502, +0.00549]
+95% CI k_swi_c: [+0.01647, +0.01691]
+AIC (poly-exp): swi=-101.55, swi_c=-38.01
+
+=== Ratio trend ===
+corr(log(A/B), log(n)): -0.8513
+permutation p-value: 0.0021
+
+=== Verdict ===
+DIFFERENT_EXPONENTIAL_GROWTH
+Both implementations show a significant exponential component, but k_swi and k_swi_c differ materially by -0.01140 (95% CI [-0.01174, -0.01110]).

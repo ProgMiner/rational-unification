@@ -38,6 +38,18 @@ mv ./robinson_comparison_persistent_all_trace_sets.png ./plots/persistent/robins
 
 ./plot_bars.py persistent synth/full -o plots/persistent/synth_full.png --ymax 370000
 ./plot_bars.py persistent synth/left_right -o plots/persistent/synth_left_right.png --ymax 370000
-for ((i=1;i<=4;++i)); do ./plot_bars.py persistent synth/loops$i -o plots/persistent/synth_loops${i}.png --ymax 88000 ; done
+for ((i = 1; i <= 4; ++i)); do ./plot_bars.py persistent synth/loops$i -o plots/persistent/synth_loops${i}.png --ymax 88000 ; done
 
 ./plot_bars_no_robinson.py persistent Lama -o ./plots/persistent/Lama.png
+
+# SWI vs original SWI-C
+
+mkdir -p ./plots/swi_vs_swi_c
+
+./plot_bars_swi_vs_swi_c.py synth/full -o ./plots/swi_vs_swi_c/synth_full.png
+./plot_bars_swi_vs_swi_c.py synth/left_right -o ./plots/swi_vs_swi_c/synth_left_right.png
+for ((i = 1; i <= 4; ++i)); do ./plot_bars_swi_vs_swi_c.py synth/loops$i -o ./plots/swi_vs_swi_c/synth_loops${i}.png ; done
+
+./plot_fits_swi_vs_swi_c.py synth/full -o ./plots/swi_vs_swi_c/synth_full_fits.png
+./plot_fits_swi_vs_swi_c.py synth/left_right -o ./plots/swi_vs_swi_c/synth_left_right_fits.png
+for ((i = 1; i <= 4; ++i)); do ./plot_fits_swi_vs_swi_c.py synth/loops$i -o ./plots/swi_vs_swi_c/synth_loops${i}_fits.png ; done

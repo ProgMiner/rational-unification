@@ -1,0 +1,42 @@
+=== Constant-factor check ===
+Implementations: swi vs swi_c
+Trace set: synth/loops4
+A root: samples/ephemeral/swi
+B root: samples/swi_c/swi
+
+     n          A ns          B ns       A/B
+     0          88.9          15.3      5.81
+    10        1061.5         380.3      2.79
+    20        2028.5         768.6      2.64
+    30        2943.6        1095.8      2.69
+    40        3991.2        1474.0      2.71
+    50        4969.2        1870.2      2.66
+    60        5872.5        2217.8      2.65
+    70        6828.1        2534.1      2.69
+    80        7822.0        2932.1      2.67
+    90        8765.2        3313.1      2.65
+   100       10020.6        3639.2      2.75
+
+=== Polynomial fit (n > 0): log t = a + p log n ===
+p_swi: +0.9710
+p_swi_c: +0.9799
+p_swi - p_swi_c: -0.0089
+95% bootstrap CI for p gap: [-0.0134, -0.0046]
+AIC (poly): swi=-80.42, swi_c=-84.77
+
+=== Polynomial-exponential fit (n > 0): log t = a + p log n + k n ===
+p_swi: +0.9204; k_swi: +0.00129
+p_swi_c: +0.9748; k_swi_c: +0.00013
+k_swi - k_swi_c: +0.00116
+95% bootstrap CI for k gap: [+0.00077, +0.00159]
+95% CI k_swi: [+0.00108, +0.00132]
+95% CI k_swi_c: [-0.00032, +0.00047]
+AIC (poly-exp): swi=-87.52, swi_c=-82.86
+
+=== Ratio trend ===
+corr(log(A/B), log(n)): -0.3535
+permutation p-value: 0.3120
+
+=== Verdict ===
+CONSTANT_LIKE
+No statistically detectable trend in log(ratio) versus log(n); both polynomial and exponential rate gaps are small or insignificant.
